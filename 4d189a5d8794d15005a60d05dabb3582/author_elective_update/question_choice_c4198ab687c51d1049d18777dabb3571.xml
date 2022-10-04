@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <misc>0</misc>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Supply Type">aac846b687c51d1049d18777dabb35b4</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 07:59:33</sys_created_on>
+        <sys_id>c4198ab687c51d1049d18777dabb3571</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>INFINITE</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>question_choice_c4198ab687c51d1049d18777dabb3571</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 08:15:09</sys_updated_on>
+        <text>INFINITE</text>
+        <value>infinite</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=c4198ab687c51d1049d18777dabb3571"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>c4198ab687c51d1049d18777dabb3571</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 07:59:33</sys_created_on>
+        <sys_id>c6294ab687c51d1049d18777dabb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 07:59:33</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>c4198ab687c51d1049d18777dabb3571</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 07:59:33</sys_created_on>
+        <sys_id>8e294ab687c51d1049d18777dabb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 07:59:33</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>question_choice_c4198ab687c51d1049d18777dabb3571</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><misc>0</misc><order>100</order><published_ref/><question display_value="Supply Type">aac846b687c51d1049d18777dabb35b4</question><rec_misc>0</rec_misc><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-05 07:59:33</sys_created_on><sys_id>c4198ab687c51d1049d18777dabb3571</sys_id><sys_mod_count>1</sys_mod_count><sys_name>INFINITE</sys_name><sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package><sys_policy/><sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope><sys_update_name>question_choice_c4198ab687c51d1049d18777dabb3571</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-05 08:15:09</sys_updated_on><text>INFINITE</text><value>infinite</value></question_choice><fx_price action="delete_multiple" query="id=c4198ab687c51d1049d18777dabb3571"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>misc</field><id>c4198ab687c51d1049d18777dabb3571</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-05 07:59:33</sys_created_on><sys_id>c6294ab687c51d1049d18777dabb3577</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-05 07:59:33</sys_updated_on><table>question_choice</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>rec_misc</field><id>c4198ab687c51d1049d18777dabb3571</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-05 07:59:33</sys_created_on><sys_id>8e294ab687c51d1049d18777dabb3576</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-05 07:59:33</sys_updated_on><table>question_choice</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>430263704</payload_hash>
+        <record_name>INFINITE</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 08:15:09</sys_created_on>
+        <sys_id>2ebc86ba87c51d1049d18777dabb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1826d1292590000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 08:15:09</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>e2bc86ba82c51d107863874e39e85323</update_guid>
+        <update_guid_history>e2bc86ba82c51d107863874e39e85323:430263704,42294ab6a1c51d10fb8e207f24fdf079:-925155944</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="INFINITE">902f427e87c51d1049d18777dabb3591</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 08:25:39</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>13ebcda031bb4103844c1304c978b2c1</sys_id>
+        <sys_metadata>c4198ab687c51d1049d18777dabb3571</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>INFINITE</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>question_choice_c4198ab687c51d1049d18777dabb3571</sys_update_name>
+        <sys_update_version display_value="question_choice_c4198ab687c51d1049d18777dabb3571">2ebc86ba87c51d1049d18777dabb3523</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 08:25:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

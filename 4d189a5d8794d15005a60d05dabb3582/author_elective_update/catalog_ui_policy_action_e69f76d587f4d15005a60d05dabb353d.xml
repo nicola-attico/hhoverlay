@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Create Token">829f72d587f4d15005a60d05dabb354d</catalog_item>
+        <catalog_variable>IO:529f36d587f4d15005a60d05dabb35a8</catalog_variable>
+        <cleared>true</cleared>
+        <disabled>true</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:50:51</sys_created_on>
+        <sys_id>e69f76d587f4d15005a60d05dabb353d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>initial_supply</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_e69f76d587f4d15005a60d05dabb353d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:50:51</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Manage token type">6e9f76d587f4d15005a60d05dabb3539</ui_policy>
+        <variable>initial_supply</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>catalog_ui_policy_action_e69f76d587f4d15005a60d05dabb353d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item display_value="Create Token">829f72d587f4d15005a60d05dabb354d</catalog_item><catalog_variable>IO:529f36d587f4d15005a60d05dabb35a8</catalog_variable><cleared>true</cleared><disabled>true</disabled><field/><mandatory>ignore</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-07-19 09:50:51</sys_created_on><sys_id>e69f76d587f4d15005a60d05dabb353d</sys_id><sys_mod_count>1</sys_mod_count><sys_name>initial_supply</sys_name><sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package><sys_policy/><sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope><sys_update_name>catalog_ui_policy_action_e69f76d587f4d15005a60d05dabb353d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-07-19 09:50:51</sys_updated_on><table/><ui_policy display_value="Manage token type">6e9f76d587f4d15005a60d05dabb3539</ui_policy><variable>initial_supply</variable><variable_set/><visible>ignore</visible></catalog_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-141427833</payload_hash>
+        <record_name>initial_supply</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:50:52</sys_created_on>
+        <sys_id>3e9f76d587f4d15005a60d05dabb354f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18215de16240000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:50:52</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>329f76d508f4d150057a5e99a35a614f</update_guid>
+        <update_guid_history>329f76d508f4d150057a5e99a35a614f:-141427833,329f76d593f4d15068fe37388530f940:-950952388</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="initial_supply">a4dfbad587f4d15005a60d05dabb35e1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:51:48</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>03d57ddc62ba433ea63306d31268aa51</sys_id>
+        <sys_metadata>e69f76d587f4d15005a60d05dabb353d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>initial_supply</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_e69f76d587f4d15005a60d05dabb353d</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_e69f76d587f4d15005a60d05dabb353d">3e9f76d587f4d15005a60d05dabb354f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:51:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[$j(function() {
+    var hashconnect = new HashConnect.HashConnect();
+
+    var AppMetadata = {
+        name: "ServiceNow hederarest",
+        description: "ServiceNow hederarest"
+    }
+
+    var extensionMetadata = {
+        name: 'HashPack',
+        icon: 'https://wallet.hashpack.app/assets/favicon/favicon.ico',
+        description: 'A HBAR wallet'
+    }
+
+    hashconnect.foundExtensionEvent.once(function(extensionMetadata) {
+        console.log("FOUNDEXT")
+        console.log(extensionMetadata)
+    })
+
+    hashconnect.pairingEvent.once(function(pairingData) {
+        console.log("PAIRING")
+        console.log(pairingData)
+        $j("#connectWallet").attr("disabled", true)
+        $j("#verify").attr("disabled", false)
+        $j("#account").text("Your account id is:")
+        $j('input[name="accountid"]').val(pairingData.accountIds[0]);
+
+    })
+
+    hashconnect.acknowledgeMessageEvent.once(function(acknowledgeData) {
+        console.log("ACK")
+    })
+
+    hashconnect.setupEvents()
+
+    hashconnect.init(AppMetadata, "testnet", false).then(function(x) {
+
+        console.log(x)
+
+        $j("#verifyOwnership").attr("disabled", true)
+        $j("#claimReward").attr("disabled", true)
+        $j("#accountInput").attr("disabled", true)
+
+        if (x.savedPairings.length == 0) {
+            $j("#account").text("Please connect your wallet")
+            $j("#verify").attr("disabled", true)
+        } else {
+            $j("#account").text("Your account id is:")
+            $j("#connectWallet").attr("disabled", true)
+            $j('input[name="accountid"]').val(x.savedPairings[0].accountIds[0]);
+        }
+
+        //for (i = 0; i < x.savedPairings.length; i++) {
+        //    $j("#pairings").append("<li>" + x.savedPairings[i].accountIds.toString() + "</li>")
+        //}
+
+        $j("#disconnectAllPairings").click(function(e) {
+            console.log(x.savedPairings.length)
+            console.log(x)
+            for (i = 0; i < x.savedPairings.length; i++) {
+                console.log("Disconnecting " + i)
+                hashconnect.disconnect(x.savedPairings.topic)
+                location.reload()
+            }
+            return false
+        })
+
+        $j("#verify").click(function(e) {
+            hashconnect.authenticate(x.savedPairings[0].topic, x.savedPairings[0].accountIds[0], '0.0.47848418', '1yd30hJ/QromaBDvYth8uUlalc8NBu8qToOoOrfrtBccFvfheHDv0IiGxGWAbI/RTkwxeEHrBlh0NnjSdYe5Dg==', 'hello').then(function(res) {
+                $j("#verify").attr("disabled", true)
+                $j("#verifyOwnership").attr("disabled", false)
+                $j("#accountFlag").css('visibility', 'visible')
+            })
+        })
+
+        $j("#connectWallet").click(function(e) {
+            hashconnect.connectToLocalWallet(x.pairingString, extensionMetadata)
+        })
+
+        $j("#verifyOwnership").click(function() {
+            fetch("https://testnet.mirrornode.hedera.com/api/v1/accounts/0.0.48100445", {
+                method: "GET"
+            }).then(function(data) {
+                return data.json()
+            }).then(function(accountData) {
+                console.log("accountData")
+                console.log(accountData)
+                for (var i = 0; i < accountData.balance.tokens.length; i++) {
+                    if (accountData.balance.tokens[i].token_id == "0.0.48112244" && accountData.balance.tokens[i].balance > 0) {
+                        $j("#shoes").text("]]>💎<![CDATA[ RunFast shoes: verified ✅ ]]>🙌<![CDATA[")
+                    }
+                    if (accountData.balance.tokens[i].token_id == "0.0.48110861" && accountData.balance.tokens[i].balance > 0) {
+                        $j("#marathon").text("]]>💎<![CDATA[ SuperMarathon completion within first 250 positions: verified ✅]]>👏<![CDATA[")
+                    }
+                }
+                $j("#verifyOwnership").attr("disabled", true)
+                $j("#claimReward").attr("disabled", false)
+            })
+        })
+
+        $j("#claimReward").submit($j("ticket")).text("Tiket token sent! Verify your wallet! ]]>😄<![CDATA[")
+
+    })
+})]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_snc_hhoverlay_Claim Reward.do</endpoint>
+        <html><![CDATA[<html>
+<head>
+  <title>Present Token</title>
+  <script language="javascript" src="x_snc_hhoverlay.HashConnect.jsdbx" />
+  <style>
+header img{width:100%; height:auto;}
+	  
+.btn {
+  border: 1px solid #0066cc;
+  background-color: #0099cc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.btn:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}  
+  </style>
+</head>
+<body>
+<header>
+<img src="Concert.png" />
+</header>
+<h1>StillWater Concert Ticket from FastShoes and SuperMarathon</h1>
+<h2>Token Verification Status</h2>
+	<p>Please ensure token 0.0.48110867 is associated to your account</p>
+<p id="ticket">Please verify the ownership of the following NFTs and you will be entitled to clam two tickets for the upcoming StillWater concert</p>
+<p id="shoes">]]>💎<![CDATA[ Running shoes: not verified</p>
+<p id="marathon">]]>💎<![CDATA[ Marathon completion within first 500 positions: not verified</p>
+
+	<h2>Your Wallet</h2>
+<p><span id="account" /></p>
+
+<g:ui_form id="claimReward" action="ui_page_process.do">
+	<input type="text" id="accountInput" name="accountid"></input><span id='accountFlag' style='visibility: hidden'>✅</span><br />
+	<input type="button" class="btn" id="connectWallet" value="Connect Wallet"></input>
+	<input type="button" class="btn" id="verify" value="Verify Account"></input>
+	<input type="button" class="btn" id="verifyOwnership" value="Verify Token Ownership"></input>
+	<input type="submit" class="btn" id="claimReward" value="Claim Reward"></input>
+</g:ui_form>
+
+<br />Click here if you want to &#160;<a id="disconnectAllPairings" href="#">restart the verification process</a>.
+
+</body>
+</html>]]></html>
+        <name>Claim Reward</name>
+        <processing_script><![CDATA[try {
+    var inputs = {};
+    inputs['token_id'] = "0.0.48110867"; // String 
+    inputs['from'] = "0.0.48099964"; // String 
+    inputs['to'] = "0.0.48100445"; // String 
+    inputs['amount'] = "2"; // String 
+    inputs['sign_with'] = [ "302a300506032b6570032100b2681f252c1d9a3bdc53ed2dbe61988ede1636083c02eacf7c39dbe77bbc5847" ]; // Array.String 
+
+    var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.transfer1_ft').inForeground().withInputs(inputs).run();
+    var outputs = result.getOutputs();
+
+    var fail = outputs['fail']; // True/False
+    var hstatus = outputs['hstatus']; // String
+    var consensus_timestamp = outputs['consensus_timestamp']; // String
+    var transaction_id = outputs['transaction_id']; // String
+    var transaction_hash = outputs['transaction_hash']; // String
+
+	response.sendRedirect("x_snc_hhoverlay_Success.do?sysparm_tx=" + transaction_id)
+	
+} catch (ex) {
+    gs.error(JSON.stringify(ex));
+}]]></processing_script>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-26 11:17:42</sys_created_on>
+        <sys_id>69cfb62587addd5049d18777dabb35bf</sys_id>
+        <sys_mod_count>167</sys_mod_count>
+        <sys_name>Claim Reward</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_ui_page_69cfb62587addd5049d18777dabb35bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-31 14:25:34</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>sys_ui_page_69cfb62587addd5049d18777dabb35bf</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[$j(function() {
+    var hashconnect = new HashConnect.HashConnect();
+
+    var AppMetadata = {
+        name: "ServiceNow hederarest",
+        description: "ServiceNow hederarest"
+    }
+
+    var extensionMetadata = {
+        name: 'HashPack',
+        icon: 'https://wallet.hashpack.app/assets/favicon/favicon.ico',
+        description: 'A HBAR wallet'
+    }
+
+    hashconnect.foundExtensionEvent.once(function(extensionMetadata) {
+        console.log("FOUNDEXT")
+        console.log(extensionMetadata)
+    })
+
+    hashconnect.pairingEvent.once(function(pairingData) {
+        console.log("PAIRING")
+        console.log(pairingData)
+        $j("#connectWallet").attr("disabled", true)
+        $j("#verify").attr("disabled", false)
+        $j("#account").text("Your account id is:")
+        $j('input[name="accountid"]').val(pairingData.accountIds[0]);
+
+    })
+
+    hashconnect.acknowledgeMessageEvent.once(function(acknowledgeData) {
+        console.log("ACK")
+    })
+
+    hashconnect.setupEvents()
+
+    hashconnect.init(AppMetadata, "testnet", false).then(function(x) {
+
+        console.log(x)
+
+        $j("#verifyOwnership").attr("disabled", true)
+        $j("#claimReward").attr("disabled", true)
+        $j("#accountInput").attr("disabled", true)
+
+        if (x.savedPairings.length == 0) {
+            $j("#account").text("Please connect your wallet")
+            $j("#verify").attr("disabled", true)
+        } else {
+            $j("#account").text("Your account id is:")
+            $j("#connectWallet").attr("disabled", true)
+            $j('input[name="accountid"]').val(x.savedPairings[0].accountIds[0]);
+        }
+
+        //for (i = 0; i &lt; x.savedPairings.length; i++) {
+        //    $j("#pairings").append("&lt;li&gt;" + x.savedPairings[i].accountIds.toString() + "&lt;/li&gt;")
+        //}
+
+        $j("#disconnectAllPairings").click(function(e) {
+            console.log(x.savedPairings.length)
+            console.log(x)
+            for (i = 0; i &lt; x.savedPairings.length; i++) {
+                console.log("Disconnecting " + i)
+                hashconnect.disconnect(x.savedPairings.topic)
+                location.reload()
+            }
+            return false
+        })
+
+        $j("#verify").click(function(e) {
+            hashconnect.authenticate(x.savedPairings[0].topic, x.savedPairings[0].accountIds[0], '0.0.47848418', '1yd30hJ/QromaBDvYth8uUlalc8NBu8qToOoOrfrtBccFvfheHDv0IiGxGWAbI/RTkwxeEHrBlh0NnjSdYe5Dg==', 'hello').then(function(res) {
+                $j("#verify").attr("disabled", true)
+                $j("#verifyOwnership").attr("disabled", false)
+                $j("#accountFlag").css('visibility', 'visible')
+            })
+        })
+
+        $j("#connectWallet").click(function(e) {
+            hashconnect.connectToLocalWallet(x.pairingString, extensionMetadata)
+        })
+
+        $j("#verifyOwnership").click(function() {
+            fetch("https://testnet.mirrornode.hedera.com/api/v1/accounts/0.0.48100445", {
+                method: "GET"
+            }).then(function(data) {
+                return data.json()
+            }).then(function(accountData) {
+                console.log("accountData")
+                console.log(accountData)
+                for (var i = 0; i &lt; accountData.balance.tokens.length; i++) {
+                    if (accountData.balance.tokens[i].token_id == "0.0.48112244" &amp;&amp; accountData.balance.tokens[i].balance &gt; 0) {
+                        $j("#shoes").text("]]&gt;💎&lt;![CDATA[ RunFast shoes: verified ✅ ]]&gt;🙌&lt;![CDATA[")
+                    }
+                    if (accountData.balance.tokens[i].token_id == "0.0.48110861" &amp;&amp; accountData.balance.tokens[i].balance &gt; 0) {
+                        $j("#marathon").text("]]&gt;💎&lt;![CDATA[ SuperMarathon completion within first 250 positions: verified ✅]]&gt;👏&lt;![CDATA[")
+                    }
+                }
+                $j("#verifyOwnership").attr("disabled", true)
+                $j("#claimReward").attr("disabled", false)
+            })
+        })
+
+        $j("#claimReward").submit($j("ticket")).text("Tiket token sent! Verify your wallet! ]]&gt;😄&lt;![CDATA[")
+
+    })
+})]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_snc_hhoverlay_Claim Reward.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Present Token&lt;/title&gt;
+  &lt;script language="javascript" src="x_snc_hhoverlay.HashConnect.jsdbx" /&gt;
+  &lt;style&gt;
+header img{width:100%; height:auto;}
+	  
+.btn {
+  border: 1px solid #0066cc;
+  background-color: #0099cc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  border: 1px solid #0099cc;
+  background-color: #00aacc;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.btn:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}  
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;img src="Concert.png" /&gt;
+&lt;/header&gt;
+&lt;h1&gt;StillWater Concert Ticket from FastShoes and SuperMarathon&lt;/h1&gt;
+&lt;h2&gt;Token Verification Status&lt;/h2&gt;
+	&lt;p&gt;Please ensure token 0.0.48110867 is associated to your account&lt;/p&gt;
+&lt;p id="ticket"&gt;Please verify the ownership of the following NFTs and you will be entitled to clam two tickets for the upcoming StillWater concert&lt;/p&gt;
+&lt;p id="shoes"&gt;]]&gt;💎&lt;![CDATA[ Running shoes: not verified&lt;/p&gt;
+&lt;p id="marathon"&gt;]]&gt;💎&lt;![CDATA[ Marathon completion within first 500 positions: not verified&lt;/p&gt;
+
+	&lt;h2&gt;Your Wallet&lt;/h2&gt;
+&lt;p&gt;&lt;span id="account" /&gt;&lt;/p&gt;
+
+&lt;g:ui_form id="claimReward" action="ui_page_process.do"&gt;
+	&lt;input type="text" id="accountInput" name="accountid"&gt;&lt;/input&gt;&lt;span id='accountFlag' style='visibility: hidden'&gt;✅&lt;/span&gt;&lt;br /&gt;
+	&lt;input type="button" class="btn" id="connectWallet" value="Connect Wallet"&gt;&lt;/input&gt;
+	&lt;input type="button" class="btn" id="verify" value="Verify Account"&gt;&lt;/input&gt;
+	&lt;input type="button" class="btn" id="verifyOwnership" value="Verify Token Ownership"&gt;&lt;/input&gt;
+	&lt;input type="submit" class="btn" id="claimReward" value="Claim Reward"&gt;&lt;/input&gt;
+&lt;/g:ui_form&gt;
+
+&lt;br /&gt;Click here if you want to &amp;#160;&lt;a id="disconnectAllPairings" href="#"&gt;restart the verification process&lt;/a&gt;.
+
+&lt;/body&gt;
+&lt;/html&gt;]]&gt;&lt;/html&gt;&lt;name&gt;Claim Reward&lt;/name&gt;&lt;processing_script&gt;&lt;![CDATA[try {
+    var inputs = {};
+    inputs['token_id'] = "0.0.48110867"; // String 
+    inputs['from'] = "0.0.48099964"; // String 
+    inputs['to'] = "0.0.48100445"; // String 
+    inputs['amount'] = "2"; // String 
+    inputs['sign_with'] = [ "302a300506032b6570032100b2681f252c1d9a3bdc53ed2dbe61988ede1636083c02eacf7c39dbe77bbc5847" ]; // Array.String 
+
+    var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.transfer1_ft').inForeground().withInputs(inputs).run();
+    var outputs = result.getOutputs();
+
+    var fail = outputs['fail']; // True/False
+    var hstatus = outputs['hstatus']; // String
+    var consensus_timestamp = outputs['consensus_timestamp']; // String
+    var transaction_id = outputs['transaction_id']; // String
+    var transaction_hash = outputs['transaction_hash']; // String
+
+	response.sendRedirect("x_snc_hhoverlay_Success.do?sysparm_tx=" + transaction_id)
+	
+} catch (ex) {
+    gs.error(JSON.stringify(ex));
+}]]&gt;&lt;/processing_script&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-26 11:17:42&lt;/sys_created_on&gt;&lt;sys_id&gt;69cfb62587addd5049d18777dabb35bf&lt;/sys_id&gt;&lt;sys_mod_count&gt;167&lt;/sys_mod_count&gt;&lt;sys_name&gt;Claim Reward&lt;/sys_name&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_69cfb62587addd5049d18777dabb35bf&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 14:25:34&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>336355741</payload_hash>
+        <record_name>Claim Reward</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-31 14:25:34</sys_created_on>
+        <sys_id>c2dadd978761d95005a60d05dabb351d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182f44b09cf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-31 14:25:34</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>8adadd974d61d950f9be3a878848be1c</update_guid>
+        <update_guid_history>8adadd974d61d950f9be3a878848be1c:336355741,2a399557d861d95083e1f3382a9e5ea5:943229062,85185917e861d950e6c1ab9e3aa0ae93:-790327033,b1e65193da61d950460f11647a4347d0:-894332976,a4a49953ec61d950fc91dbcdc591093b:629856143,3c5111df5921d9501319b6741b484eb3:1675209435,7bd0d59f1b21d95010d9d2e4e16386a4:151050340,89bf495f6221d9509b835b90a4ad459b:-791851091,447b8d5b2521d950f88b4ac85e8bcd02:-976342419,07ca855b7921d95073e366ded65c8136:-1753965973,bddebf435d2d9950e85aad7d20726b2f:-1790763501,2e4e7343f72d9950aaa6ab384a1c3208:983424867,cfddf7032b2d995089e811a5190411be:-1710938246,5f6d7fcfa5e99950d262d4901016d0fc:-1023366350,4eacf3cfaee9995011eb023c5f14c58c:-2145112537,019c73cf6ee99950f242f6e196d11985:1616299119,8bfb778ffce999502ca9e90f6b02b36b:-1304756254,76bb778f31e999504087fff77f668d0c:87301022,9f8bb38fe4e999507d7829eb688591c6:2031460913,612bfb0fbde99950ede7bcdb01f081c8:2096632645,54d72a3da12911906eaf6d7d9cc7a8df:-386858097,e747a23df52911906c72ae9f36bd795b:-536750422,9b6666f987291190e72979813235c035:429297750,7a2662f956291190e349f5259edd231a:-37677963,c5d522f9cc291190eb47e5b3f888c1d2:-769249917,77756ab91f291190a3e5d118d8cfaa2b:835013404,f8356e7906291190663cfefad9b62676:1172080341,6b746a7981291190e37442e70bab94e2:356513328,ca2462392f2911907824606fda6fd6ec:414842804,01e3e2f52e291190b131c23acebeca8d:-1652189834,37c1eef58c291190b285f08243d287a4:-1547877522,05a162f573291190ee1c21ea3c023c74:-841822274,56706eb5c4291190cf763969ecbd7b5f:-931458286,a4606eb5462911905b4f5b10120dbf6b:-993843770,c8006eb55e291190b63bfdb768160a24:699976345,aeafd6b535291190d27a8f533778f6a4:-136415033,1b8f1ab541291190968ed749bf9ef425:-858454905,448fd6b5f9291190015fd4a31d26b24f:-1500251638,e44fde755f2911908275c37d54a6885b:1364914372,9fbe9a75672911909f57a3fe28fa4280:1489513136,f90e1675ec291190d3c1bb1cbe6dc655:1274384451,63cd1675f1291190db9d67df656d8a1f:1801501430,3a2c5235bc2911906e1822622bdcf1da:907801430,5efbd6f12129119075a298a40bbf15af:-1048765698,094bd6f1c229119012243ec12fe6b39c:-1062620568,289952b1ff2911901bc57974e9f21d45:-1946227375,3f29de31402911904174f79ec5f93e40:291408579,aaa7d631f82911907f02b37b6caf3f96:1625382819,e0a556fd66e51190a95ea55b2ab02bbb:1023969946,0e159a7db4e51190607fbca5bfc69e80:-1749777916,b2e3d4b165a111904fa9575e1c017a19:1232924039,8232147187a11190e1ba57681c271f1a:449479844,5ea1dcfd566111902211e1c31aeefc6f:-901791597,2c011cfd51611190c68e77513d3a47f5:-2026696853,32709cfdc66111904fa12a68b16daeee:361305561,1b5e84bdc5611190621fb3803133df7b:790219788,d9dd8c7d166111909815774063656e0f:-1325194582,e03d087d2f611190efd32869d30bc6ef:-1441318981,81fc047da26111900d253a490d092ec7:920148466,6adc047d84611190d0755e9172436cc1:-55602907,747a80b9f46111908ff9239aba51c097:-1986817971,92c880394e6111903119ee996275a470:-1770305630,9728c879576111903dc12adfe638fb94:320022033,e1d608390e61119001435478784e3c1a:-465539601,c1768039fd611190d0585308866a8b27:227555067,9a26803933611190a45c484cd6b3d321:-456270085,2ef58039b46111905fb4f44cd40c841b:1651822279,26058cb52c6111903a9b7d1348a24e5c:-95024545,45e4c0f5046111900a9b212b056ffb10:1775238532,7c34c0b5d06111908959a2dc6bb170a1:77023557,8e33cc7530611190d2d579fc36107ad4:-720475925,69e2c4758a61119063334bf18d5d5939:-720434123,9722c8f11561119062b1e68a2c26d731:280828645,40effbe133611190faee55caae3e125b:7296477,d9cf7761e2611190ea61bc13969efef4:-1051750932,c55e3761bf6111901ff2ff6ed4ce275a:-621353300,128c77610c611190aec367529669c257:-1547285719,557c372191611190f559462aad598ef4:-1017829802,0deb3721ae6111901830d741bef365ed:-1804699829,efabf3215e6111905721c13d88b35b52:724745752,c41b3721ce611190c6c1a3422a0dbdc4:1582384915,3eca7bed10211190f68a6adcfc0e675b:967923941,629affed1521119025ef5043d51a946b:-1672513594,b70ab7ed03211190a5ac2f1c269cab2a:1533113980,4dd9b7ed85211190f9c6eaaaa3df3c24:-958727023,c788ff6d76211190fadff1c53ffc44d2:-211067279,415837ad5f2111904ca78c7c1edacbb3:820567561,8697336dbf2111902f8a71cf357afa15:-2013200023,a776bf2d12211190721374923d67b439:1431012196,a256372d3b211190c7c480443b7e74f4:-890835169,6b26372d22211190d5ab16c0e84ad2c1:499060170,0e95f3e929211190d9b412660e0ea554:-1577857478,837477a91e2111907ae71e64fda83ba0:905291795,1214f3e9062111900a3d73416c6e6c0e:1270235317,291377a9a121119061bc1900780344c0:-320086765,a6f2f3a97b211190e0a0da2552f8fb86:483340499,19e277a9102111901ee93150ff602996:1577483,fab233a9be211190c454d7cce1256b48:-1369926297,d47233a95e2111900121227499daa625:-350597713,85523f69b6211190b1a1bcecd55321ab:1614877571,4b12f7699d211190692a066407d188d2:1116758439,e2b173658c21119099724ff6ccdae20c:1227995792,ea6da7a5f6211190cf68aadb0eafb922:-1990150059,4e4d27a5aa21119050ebcc6a045ca664:-1651972524,061def65712111909e3e163b026b1f12:-1074317346,c1dcaf65402111909414afd1de9fc8f4:608384969,278bafe1ff211190830fae9ab9f1fca2:748380587,890ae3e10c211190fec30e37f2e04f4c:1381149611,f609efa1122111905adab83860225809:2136621153,c688e7a183211190f04813261520e035:370856879,dd2763ed12eddd50e8d4d7874ca623d8:1076804447,b073efad7feddd5065f7ec4485002d81:1526031517,c3f26f6d1ceddd5007764a8612abcc2a:947884927,2e1167294aeddd50e17decdcdbad62db:-103904596,6ae0636d93eddd503b897908249455b8:601388945,026c97291aeddd5052338c56efe6c524:-1870232453,ca4a9729eceddd50e6ae3e1abd891609:-1905197806,393a9fe5c2eddd503aa9477d2cd55187:-317660721,a649d7e566eddd50e0b4b659b1fece2a:-470964180,67f89ba52aeddd5026136f3e2157461c:1775932171,1c9893e547eddd50ee648049c0fc0d0f:1925069759,39389ba5d8eddd50bb2d044ccbd6c904:-153097347,86e7d3a53eeddd50be3eaf13bd8f9727:-531637938,4557d765dfeddd5014cc7cf01479a953:765688986,3846536590eddd50e264236a1b9b684c:-1106606062,dc06536513eddd506a5c264d1a3ed146:700082657,fab51365f9eddd5024b34ce888f839ad:-380003561,56c4dbe178eddd501d58c51f7a2b06a8:-626854539,d992df6193eddd50fd0d9c6150175a28:-1665364089,e462df617deddd5065816ec7aa949032:-1441081785,a722df61fdeddd50f02afaff33d0371e:-1570883865,72f15b61a8eddd50d799fc8968cacbfb:2075065987,5fb1976193eddd50d0480b4aa8423cfe:1492844239,05b1976189eddd50034ab63c2e943ff9:-668732204,9b615761eeeddd50fd90bea5ec9fecc9:1082329885,1f415f21dceddd5083552221dc6503d8:-1693344835,89b05bed7aaddd50940f8e1320a1807c:-852640095,13ed4fad68addd50e44df49465b96cf3:-1257222140,d9dd0fad77addd50741f924db4f24ac9:-1296690346,8b4d476dfbaddd50a05419d2d06a0ca0:-1548474853,5b0d876d99addd50842b6fc4ff11df68:530301480,50eb076de6addd5089e23425b560c1ef:1995634106,7ea987e902addd50b1339f67cf3f201d:-1603995088,cf4943e969addd50aec3ffaa0c4b6d23:-376394182,aad803e90faddd5092d73e8de06d10fa:-132511394,22c8cfa9f9addd5097e69e870978794c:-310589132,dfa88fa98faddd508765970cd3fe158d:425147017,51880fa9a9addd50ee6b817b39f0e46a:1304433428,a758cb6991addd50e5ec94f7d5d60dd4:1482511166,6d38cb697aaddd502eee9286b6da1ace:-587675558,0f07cb69e0addd50d6381e207352209b:-1726708729,90958b29a2addd5010db7de0d50e47f2:585866932,8065c729d0addd50e158618de7da7dc3:1401727125,5855c7295daddd50d2d14f325712d3bd:-2003479147,2cf4832935addd501351b930bb58be72:-580145949,50d44329e2addd50ddc600f2c4231564:2019758659,53b44329b6addd50a3a7356b8e56bd5d:-1389710203,80a48be5daaddd50281b9d1f7a22318a:-550157275,b464cbe567addd50e3a00055addcf61c:321615589,762407e5f8addd50ddd13f500a523bc6:-2077142953,61d307e55aaddd502336c4c17697e2f5:-1685015679,f4b3c7a532addd50d665358dd8f15fa7:78449629,4763c7a5edaddd5001d1fb72e024d11d:594846493,9902cf6566addd50c7d548d66e4f8a6e:1547263728,f6c1876579addd50182350ed9fb9728c:-1571260676,af618765b3addd5098beb08a542f18e2:-473463944,ba118765faaddd5067cb3a33619d4384:1890476608,d5ef3a254baddd50fcb5a07ffb85b885:1732073291</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-05 17:56:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>0df4a1bcfed5462088d7ec840a6a9910</sys_id>
+        <sys_metadata>69cfb62587addd5049d18777dabb35bf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Claim Reward</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_69cfb62587addd5049d18777dabb35bf</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_69cfb62587addd5049d18777dabb35bf">c2dadd978761d95005a60d05dabb351d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-05 17:56:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

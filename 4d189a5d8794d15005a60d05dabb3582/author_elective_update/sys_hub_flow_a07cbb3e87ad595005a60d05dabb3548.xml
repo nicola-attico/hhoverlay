@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>transfer_fastshoes_nft</internal_name>
+        <label_cache>[{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.secret_code","label":"1 - Get Catalog Variables➛secret_code","reference":"","reference_display":"secret_code","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.account_id","label":"1 - Get Catalog Variables➛account_id","reference":"","reference_display":"account_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number","label":"1 - Get Catalog Variables➛serial_number","reference":"","reference_display":"serial_number","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.token_id","label":"1 - Get Catalog Variables➛token_id","reference":"","reference_display":"token_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__action_status__","label":"2 - transfer1_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"90bba8a1-0953-4eee-938f-565c3312ffc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__dont_treat_as_error__","label":"2 - transfer1_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"00499f03-2fc8-42fd-abe5-943145708713"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.fail","label":"2 - transfer1_nft➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0482f688-ce7d-4f56-b327-0aa8944da9b4"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.hstatus","label":"2 - transfer1_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"746a3bd4-6499-4ba8-9d13-cd855a04bcc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.consensus_timestamp","label":"2 - transfer1_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c591bf8e-6e6a-44a6-af03-3cb9dc5386b3"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_id","label":"2 - transfer1_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"081c0c2f-ee38-4735-b799-5c19e384440b"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_hash","label":"2 - transfer1_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1dab3514-a38c-4f62-a116-976f543c538e"}},{"name":"Service Catalog_1.run_start_time","label":"Trigger - Service Catalog➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>55bc337e87ad595005a60d05dabb350b</master_snapshot>
+        <name>Transfer FastShoes NFT</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>e9bc337e87ad595005a60d05dabb3548</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:54:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a07cbb3e87ad595005a60d05dabb3548</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Transfer FastShoes NFT</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_hub_flow_a07cbb3e87ad595005a60d05dabb3548</sys_update_name>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:10</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_variable_value action="DELETE" query="document_key=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_flow_catalog_trigger action="DELETE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e9bc337e87ad595005a60d05dabb3548</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:33</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="DELETE" query="identifier=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT INff9cbf3e87ad595005a60d05dabb358b"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>ff9cbf3e87ad595005a60d05dabb358b</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:10</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=ff9cbf3e87ad595005a60d05dabb358b"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT INa07cbb3e87ad595005a60d05dabb354a"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>a07cbb3e87ad595005a60d05dabb3548</id>
+        <name>Transfer FastShoes NFT</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:54:39</sys_created_on>
+        <sys_id>a07cbb3e87ad595005a60d05dabb354a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:54:39</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=a07cbb3e87ad595005a60d05dabb354a"/>
+    <sys_hub_flow_input action="DELETE" query="model=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN2f9c7f3e87ad595005a60d05dabb3548,779cbf3e87ad595005a60d05dabb3585"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</model>
+        <model_id>a07cbb3e87ad595005a60d05dabb3548</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:24</sys_created_on>
+        <sys_id>2f9c7f3e87ad595005a60d05dabb3548</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</model>
+        <model_id>a07cbb3e87ad595005a60d05dabb3548</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>779cbf3e87ad595005a60d05dabb3585</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_action_instance action="DELETE" query="flow=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN21deffbe87ad595005a60d05dabb35a3,379cbf3e87ad595005a60d05dabb3591"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="transfer1_nft">93f0e1e5471741101cf79454836d43d3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>21deffbe87ad595005a60d05dabb35a3</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:10</sys_updated_on>
+        <ui_id>67b41610-6e27-499a-8e1f-8441c6949bbd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=21deffbe87ad595005a60d05dabb35a3"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>21deffbe87ad595005a60d05dabb35a3</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>6ddeffbe87ad595005a60d05dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"true\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"fe9c1744-a0b3-45df-a8f9-d160d7e22dc4\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD43b98ffbb15f4110d4e113392f3899ba\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"mapped\":\"{}\",\"child_type\":\"string\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"a89dc803-622a-4d46-81fe-b6b5ecc4f1c1\"}"}},"complexObject":{"name$":"FD43b98ffbb15f4110d4e113392f3899ba","$COCollectionField":["302a300506032b6570032100a1cc0911c997a847caf3dd7bda007d6b25d1bf02386cd1560dc84ccb928532ae"]},"serializationFormat":"JSON"}</value>
+        <variable display_value="sign_with">1fb98ffb475f41101cf79454836d43cf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>21deffbe87ad595005a60d05dabb35a3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>a9deffbe87ad595005a60d05dabb35a5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:22:53</sys_updated_on>
+        <value>0.0.48099955</value>
+        <variable display_value="from">1bf0e1e5471741101cf79454836d43d6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=21deffbe87ad595005a60d05dabb35a3"/>
+    <sys_element_mapping action="DELETE">
+        <field>from</field>
+        <id>21deffbe87ad595005a60d05dabb35a3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>2ddeffbe87ad595005a60d05dabb35a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>serial</field>
+        <id>21deffbe87ad595005a60d05dabb35a3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>29deffbe87ad595005a60d05dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>sign_with</field>
+        <id>21deffbe87ad595005a60d05dabb35a3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>eddeffbe87ad595005a60d05dabb35a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>to</field>
+        <id>21deffbe87ad595005a60d05dabb35a3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>a1deffbe87ad595005a60d05dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.account_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>token_id</field>
+        <id>21deffbe87ad595005a60d05dabb35a3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:06</sys_created_on>
+        <sys_id>65deffbe87ad595005a60d05dabb35a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:06</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=21deffbe87ad595005a60d05dabb35a3"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=21deffbe87ad595005a60d05dabb35a3"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>379cbf3e87ad595005a60d05dabb3591</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:10</sys_updated_on>
+        <ui_id>5df04487-63d4-4e41-b8d8-130c395e5b82</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=379cbf3e87ad595005a60d05dabb3591"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>379cbf3e87ad595005a60d05dabb3591</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>b79cbf3e87ad595005a60d05dabb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <value>41fab77e87e9d19049d18777dabb3544:item_option_new,c01b33fa87e9d19049d18777dabb35cf:item_option_new,c9c5bf3a87e9d19049d18777dabb35a4:item_option_new,b2167f3a87e9d19049d18777dabb35d4:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>379cbf3e87ad595005a60d05dabb3591</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>ff9cbf3e87ad595005a60d05dabb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <value>8d547bf687e9d19049d18777dabb350b</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=379cbf3e87ad595005a60d05dabb3591"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>379cbf3e87ad595005a60d05dabb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>3b9cbf3e87ad595005a60d05dabb3593</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>379cbf3e87ad595005a60d05dabb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>379cbf3e87ad595005a60d05dabb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>379cbf3e87ad595005a60d05dabb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>739cbf3e87ad595005a60d05dabb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=379cbf3e87ad595005a60d05dabb3591"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=379cbf3e87ad595005a60d05dabb3591"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_flow_variable action="DELETE" query="model=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN7b9cbf3e87ad595005a60d05dabb3584,7f9cbf3e87ad595005a60d05dabb3589"/>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>7b9cbf3e87ad595005a60d05dabb3584</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:25</sys_created_on>
+        <sys_id>7f9cbf3e87ad595005a60d05dabb3589</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN25bc337e87ad595005a60d05dabb3549"/>
+    <sys_flow_trigger_plan action="DELETE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"25bc337e87ad595005a60d05dabb3549","name":"plan","plan_signature":null}}</plan>
+        <plan_id>a07cbb3e87ad595005a60d05dabb3548</plan_id>
+        <snapshot>55bc337e87ad595005a60d05dabb350b</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>25bc337e87ad595005a60d05dabb3549</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:09</sys_updated_on>
+        <trigger display_value="">e9bc337e87ad595005a60d05dabb3548</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=a07cbb3e87ad595005a60d05dabb3548"/>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>transfer_fastshoes_nft</internal_name>
+        <label_cache>[{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.secret_code","label":"1 - Get Catalog Variables➛secret_code","reference":"","reference_display":"secret_code","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.account_id","label":"1 - Get Catalog Variables➛account_id","reference":"","reference_display":"account_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number","label":"1 - Get Catalog Variables➛serial_number","reference":"","reference_display":"serial_number","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.token_id","label":"1 - Get Catalog Variables➛token_id","reference":"","reference_display":"token_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__action_status__","label":"2 - transfer1_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"90bba8a1-0953-4eee-938f-565c3312ffc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__dont_treat_as_error__","label":"2 - transfer1_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"00499f03-2fc8-42fd-abe5-943145708713"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.fail","label":"2 - transfer1_nft➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0482f688-ce7d-4f56-b327-0aa8944da9b4"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.hstatus","label":"2 - transfer1_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"746a3bd4-6499-4ba8-9d13-cd855a04bcc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.consensus_timestamp","label":"2 - transfer1_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c591bf8e-6e6a-44a6-af03-3cb9dc5386b3"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_id","label":"2 - transfer1_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"081c0c2f-ee38-4735-b799-5c19e384440b"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_hash","label":"2 - transfer1_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1dab3514-a38c-4f62-a116-976f543c538e"}},{"name":"Service Catalog_1.run_start_time","label":"Trigger - Service Catalog➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Transfer FastShoes NFT</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Transfer FastShoes NFT">a07cbb3e87ad595005a60d05dabb3548</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>55bc337e87ad595005a60d05dabb350b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_variable_value action="DELETE" query="document_key=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=55bc337e87ad595005a60d05dabb350b^sys_idNOT INd1bc337e87ad595005a60d05dabb3537"/>
+    <sys_hub_trigger_instance action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">55bc337e87ad595005a60d05dabb350b</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>d1bc337e87ad595005a60d05dabb3537</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:09</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="DELETE" query="document_key=d1bc337e87ad595005a60d05dabb3537"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN15bc337e87ad595005a60d05dabb350c"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>55bc337e87ad595005a60d05dabb350b</id>
+        <name>Transfer FastShoes NFT</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:47</sys_created_on>
+        <sys_id>15bc337e87ad595005a60d05dabb350c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:47</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=15bc337e87ad595005a60d05dabb350c"/>
+    <sys_hub_flow_input action="DELETE" query="model=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN95bc337e87ad595005a60d05dabb350d,d9bc337e87ad595005a60d05dabb3525"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Transfer FastShoes NFT">55bc337e87ad595005a60d05dabb350b</model>
+        <model_id>55bc337e87ad595005a60d05dabb350b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:47</sys_created_on>
+        <sys_id>95bc337e87ad595005a60d05dabb350d</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Transfer FastShoes NFT">55bc337e87ad595005a60d05dabb350b</model>
+        <model_id>55bc337e87ad595005a60d05dabb350b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:47</sys_created_on>
+        <sys_id>d9bc337e87ad595005a60d05dabb3525</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_action_instance action="DELETE" query="flow=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN9bee73fe87ad595005a60d05dabb35d5,d1bc337e87ad595005a60d05dabb3535"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="transfer1_nft">93f0e1e5471741101cf79454836d43d3</action_type>
+        <action_type_parent display_value="transfer1_nft">e6f86eac471305101cf79454836d432f</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">55bc337e87ad595005a60d05dabb350b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>9bee73fe87ad595005a60d05dabb35d5</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <ui_id>67b41610-6e27-499a-8e1f-8441c6949bbd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=9bee73fe87ad595005a60d05dabb35d5"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9bee73fe87ad595005a60d05dabb35d5</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>13ee73fe87ad595005a60d05dabb35d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"true\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"fe9c1744-a0b3-45df-a8f9-d160d7e22dc4\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD43b98ffbb15f4110d4e113392f3899ba\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"mapped\":\"{}\",\"child_type\":\"string\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"a89dc803-622a-4d46-81fe-b6b5ecc4f1c1\"}"}},"complexObject":{"name$":"FD43b98ffbb15f4110d4e113392f3899ba","$COCollectionField":["302a300506032b6570032100a1cc0911c997a847caf3dd7bda007d6b25d1bf02386cd1560dc84ccb928532ae"]},"serializationFormat":"JSON"}</value>
+        <variable display_value="sign_with">1fb98ffb475f41101cf79454836d43cf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9bee73fe87ad595005a60d05dabb35d5</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>5fee73fe87ad595005a60d05dabb35d7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <value>0.0.48099955</value>
+        <variable display_value="from">1bf0e1e5471741101cf79454836d43d6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=9bee73fe87ad595005a60d05dabb35d5"/>
+    <sys_element_mapping action="DELETE">
+        <field>from</field>
+        <id>9bee73fe87ad595005a60d05dabb35d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>dfee73fe87ad595005a60d05dabb35d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>serial</field>
+        <id>9bee73fe87ad595005a60d05dabb35d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>dbee73fe87ad595005a60d05dabb35d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>sign_with</field>
+        <id>9bee73fe87ad595005a60d05dabb35d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>93ee73fe87ad595005a60d05dabb35d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>to</field>
+        <id>9bee73fe87ad595005a60d05dabb35d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>57ee73fe87ad595005a60d05dabb35d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.account_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>token_id</field>
+        <id>9bee73fe87ad595005a60d05dabb35d5</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 13:05:29</sys_created_on>
+        <sys_id>1bee73fe87ad595005a60d05dabb35d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 13:05:29</sys_updated_on>
+        <table>var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3</table>
+        <value>{{5df04487-63d4-4e41-b8d8-130c395e5b82.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=9bee73fe87ad595005a60d05dabb35d5"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=9bee73fe87ad595005a60d05dabb35d5"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Transfer FastShoes NFT">55bc337e87ad595005a60d05dabb350b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>d1bc337e87ad595005a60d05dabb3535</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:07</sys_updated_on>
+        <ui_id>5df04487-63d4-4e41-b8d8-130c395e5b82</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=d1bc337e87ad595005a60d05dabb3535"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d1bc337e87ad595005a60d05dabb3535</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>1dbc337e87ad595005a60d05dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <value>41fab77e87e9d19049d18777dabb3544:item_option_new,c01b33fa87e9d19049d18777dabb35cf:item_option_new,c9c5bf3a87e9d19049d18777dabb35a4:item_option_new,b2167f3a87e9d19049d18777dabb35d4:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d1bc337e87ad595005a60d05dabb3535</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>ddbc337e87ad595005a60d05dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <value>8d547bf687e9d19049d18777dabb350b</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=d1bc337e87ad595005a60d05dabb3535"/>
+    <sys_element_mapping action="DELETE">
+        <field>catalog_variables</field>
+        <id>d1bc337e87ad595005a60d05dabb3535</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>15bc337e87ad595005a60d05dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>requested_item</field>
+        <id>d1bc337e87ad595005a60d05dabb3535</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>99bc337e87ad595005a60d05dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>template_catalog_item</field>
+        <id>d1bc337e87ad595005a60d05dabb3535</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>d5bc337e87ad595005a60d05dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=d1bc337e87ad595005a60d05dabb3535"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=d1bc337e87ad595005a60d05dabb3535"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_flow_variable action="DELETE" query="model=55bc337e87ad595005a60d05dabb350b"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b^sys_idNOT IN11bc337e87ad595005a60d05dabb352a,95bc337e87ad595005a60d05dabb3522"/>
+    <sys_documentation action="DELETE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:48</sys_created_on>
+        <sys_id>11bc337e87ad595005a60d05dabb352a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-30 12:55:47</sys_created_on>
+        <sys_id>95bc337e87ad595005a60d05dabb3522</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:55:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_55bc337e87ad595005a60d05dabb350b"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_55bc337e87ad595005a60d05dabb350b"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>a07cbb3e87ad595005a60d05dabb3548</sys_id>
+        <latest_snapshot>55bc337e87ad595005a60d05dabb350b</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch5-06-22-2022_06-30-2022_1211.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>sys_hub_flow_a07cbb3e87ad595005a60d05dabb3548</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;transfer_fastshoes_nft&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.secret_code","label":"1 - Get Catalog Variables➛secret_code","reference":"","reference_display":"secret_code","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.account_id","label":"1 - Get Catalog Variables➛account_id","reference":"","reference_display":"account_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number","label":"1 - Get Catalog Variables➛serial_number","reference":"","reference_display":"serial_number","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.token_id","label":"1 - Get Catalog Variables➛token_id","reference":"","reference_display":"token_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__action_status__","label":"2 - transfer1_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"90bba8a1-0953-4eee-938f-565c3312ffc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__dont_treat_as_error__","label":"2 - transfer1_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"00499f03-2fc8-42fd-abe5-943145708713"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.fail","label":"2 - transfer1_nft➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0482f688-ce7d-4f56-b327-0aa8944da9b4"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.hstatus","label":"2 - transfer1_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"746a3bd4-6499-4ba8-9d13-cd855a04bcc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.consensus_timestamp","label":"2 - transfer1_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c591bf8e-6e6a-44a6-af03-3cb9dc5386b3"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_id","label":"2 - transfer1_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"081c0c2f-ee38-4735-b799-5c19e384440b"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_hash","label":"2 - transfer1_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1dab3514-a38c-4f62-a116-976f543c538e"}},{"name":"Service Catalog_1.run_start_time","label":"Trigger - Service Catalog➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;master_snapshot&gt;55bc337e87ad595005a60d05dabb350b&lt;/master_snapshot&gt;&lt;name&gt;Transfer FastShoes NFT&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;remote_trigger_id&gt;e9bc337e87ad595005a60d05dabb3548&lt;/remote_trigger_id&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:54:39&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/sys_id&gt;&lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;&lt;sys_name&gt;Transfer FastShoes NFT&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_a07cbb3e87ad595005a60d05dabb3548&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:10&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_flow_catalog_trigger action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;catalog_item/&gt;&lt;name/&gt;&lt;run_flow_in/&gt;&lt;sys_class_name&gt;sys_flow_catalog_trigger&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e9bc337e87ad595005a60d05dabb3548&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:33&lt;/sys_updated_on&gt;&lt;/sys_flow_catalog_trigger&gt;&lt;sys_trigger_runner_mapping action="delete_multiple" query="identifier=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT INff9cbf3e87ad595005a60d05dabb358b"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;ff9cbf3e87ad595005a60d05dabb358b&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:10&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=ff9cbf3e87ad595005a60d05dabb358b"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT INa07cbb3e87ad595005a60d05dabb354a"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/id&gt;&lt;name&gt;Transfer FastShoes NFT&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:54:39&lt;/sys_created_on&gt;&lt;sys_id&gt;a07cbb3e87ad595005a60d05dabb354a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:54:39&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a07cbb3e87ad595005a60d05dabb354a"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN2f9c7f3e87ad595005a60d05dabb3548,779cbf3e87ad595005a60d05dabb3585"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/model&gt;&lt;model_id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:24&lt;/sys_created_on&gt;&lt;sys_id&gt;2f9c7f3e87ad595005a60d05dabb3548&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:09&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/model&gt;&lt;model_id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;true&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;779cbf3e87ad595005a60d05dabb3585&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:10&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN21deffbe87ad595005a60d05dabb35a3,379cbf3e87ad595005a60d05dabb3591"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="transfer1_nft"&gt;93f0e1e5471741101cf79454836d43d3&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/sys_id&gt;&lt;sys_mod_count&gt;30&lt;/sys_mod_count&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;67b41610-6e27-499a-8e1f-8441c6949bbd&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=21deffbe87ad595005a60d05dabb35a3"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;21deffbe87ad595005a60d05dabb35a3&lt;/document_key&gt;&lt;order&gt;5&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;6ddeffbe87ad595005a60d05dabb35a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"true\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"fe9c1744-a0b3-45df-a8f9-d160d7e22dc4\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD43b98ffbb15f4110d4e113392f3899ba\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"mapped\":\"{}\",\"child_type\":\"string\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"a89dc803-622a-4d46-81fe-b6b5ecc4f1c1\"}"}},"complexObject":{"name$":"FD43b98ffbb15f4110d4e113392f3899ba","$COCollectionField":["302a300506032b6570032100a1cc0911c997a847caf3dd7bda007d6b25d1bf02386cd1560dc84ccb928532ae"]},"serializationFormat":"JSON"}&lt;/value&gt;&lt;variable display_value="sign_with"&gt;1fb98ffb475f41101cf79454836d43cf&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;21deffbe87ad595005a60d05dabb35a3&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;a9deffbe87ad595005a60d05dabb35a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:22:53&lt;/sys_updated_on&gt;&lt;value&gt;0.0.48099955&lt;/value&gt;&lt;variable display_value="from"&gt;1bf0e1e5471741101cf79454836d43d6&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=21deffbe87ad595005a60d05dabb35a3"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;from&lt;/field&gt;&lt;id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;2ddeffbe87ad595005a60d05dabb35a4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;serial&lt;/field&gt;&lt;id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;29deffbe87ad595005a60d05dabb35a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;sign_with&lt;/field&gt;&lt;id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;eddeffbe87ad595005a60d05dabb35a4&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;to&lt;/field&gt;&lt;id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;a1deffbe87ad595005a60d05dabb35a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.account_id}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;token_id&lt;/field&gt;&lt;id&gt;21deffbe87ad595005a60d05dabb35a3&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:06&lt;/sys_created_on&gt;&lt;sys_id&gt;65deffbe87ad595005a60d05dabb35a5&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:06&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.token_id}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=21deffbe87ad595005a60d05dabb35a3"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=21deffbe87ad595005a60d05dabb35a3"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent/&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;379cbf3e87ad595005a60d05dabb3591&lt;/sys_id&gt;&lt;sys_mod_count&gt;36&lt;/sys_mod_count&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:10&lt;/sys_updated_on&gt;&lt;ui_id&gt;5df04487-63d4-4e41-b8d8-130c395e5b82&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=379cbf3e87ad595005a60d05dabb3591"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;379cbf3e87ad595005a60d05dabb3591&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;b79cbf3e87ad595005a60d05dabb3594&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;value&gt;41fab77e87e9d19049d18777dabb3544:item_option_new,c01b33fa87e9d19049d18777dabb35cf:item_option_new,c9c5bf3a87e9d19049d18777dabb35a4:item_option_new,b2167f3a87e9d19049d18777dabb35d4:item_option_new&lt;/value&gt;&lt;variable display_value="Catalog Variables"&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;379cbf3e87ad595005a60d05dabb3591&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;ff9cbf3e87ad595005a60d05dabb3594&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;value&gt;8d547bf687e9d19049d18777dabb350b&lt;/value&gt;&lt;variable display_value="Template Catalog Items and Variable Sets"&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=379cbf3e87ad595005a60d05dabb3591"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;379cbf3e87ad595005a60d05dabb3591&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;3b9cbf3e87ad595005a60d05dabb3593&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;379cbf3e87ad595005a60d05dabb3591&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;379cbf3e87ad595005a60d05dabb3594&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;379cbf3e87ad595005a60d05dabb3591&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;739cbf3e87ad595005a60d05dabb3594&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=379cbf3e87ad595005a60d05dabb3591"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=379cbf3e87ad595005a60d05dabb3591"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN7b9cbf3e87ad595005a60d05dabb3584,7f9cbf3e87ad595005a60d05dabb3589"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;7b9cbf3e87ad595005a60d05dabb3584&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:25&lt;/sys_created_on&gt;&lt;sys_id&gt;7f9cbf3e87ad595005a60d05dabb3589&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:25&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=a07cbb3e87ad595005a60d05dabb3548^sys_idNOT IN25bc337e87ad595005a60d05dabb3549"/&gt;&lt;sys_flow_trigger_plan action="INSERT_OR_UPDATE"&gt;&lt;binding_strategy&gt;com.snc.process_flow.engine.binding.RunAlways&lt;/binding_strategy&gt;&lt;plan&gt;{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"25bc337e87ad595005a60d05dabb3549","name":"plan","plan_signature":null}}&lt;/plan&gt;&lt;plan_id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/plan_id&gt;&lt;snapshot&gt;55bc337e87ad595005a60d05dabb350b&lt;/snapshot&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;25bc337e87ad595005a60d05dabb3549&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:09&lt;/sys_updated_on&gt;&lt;trigger display_value=""&gt;e9bc337e87ad595005a60d05dabb3548&lt;/trigger&gt;&lt;/sys_flow_trigger_plan&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=a07cbb3e87ad595005a60d05dabb3548"/&gt;&lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;true&lt;/active&gt;&lt;annotation/&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description/&gt;&lt;internal_name&gt;transfer_fastshoes_nft&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.secret_code","label":"1 - Get Catalog Variables➛secret_code","reference":"","reference_display":"secret_code","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.account_id","label":"1 - Get Catalog Variables➛account_id","reference":"","reference_display":"account_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number","label":"1 - Get Catalog Variables➛serial_number","reference":"","reference_display":"serial_number","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"5df04487-63d4-4e41-b8d8-130c395e5b82.token_id","label":"1 - Get Catalog Variables➛token_id","reference":"","reference_display":"token_id","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__action_status__","label":"2 - transfer1_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"90bba8a1-0953-4eee-938f-565c3312ffc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.__dont_treat_as_error__","label":"2 - transfer1_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"00499f03-2fc8-42fd-abe5-943145708713"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.fail","label":"2 - transfer1_nft➛fail","reference_display":"fail","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0482f688-ce7d-4f56-b327-0aa8944da9b4"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.hstatus","label":"2 - transfer1_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"746a3bd4-6499-4ba8-9d13-cd855a04bcc1"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.consensus_timestamp","label":"2 - transfer1_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"c591bf8e-6e6a-44a6-af03-3cb9dc5386b3"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_id","label":"2 - transfer1_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"081c0c2f-ee38-4735-b799-5c19e384440b"}},{"name":"67b41610-6e27-499a-8e1f-8441c6949bbd.transaction_hash","label":"2 - transfer1_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"1dab3514-a38c-4f62-a116-976f543c538e"}},{"name":"Service Catalog_1.run_start_time","label":"Trigger - Service Catalog➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","attributes":{"test_input_hidden":"true"}}]&lt;/label_cache&gt;&lt;master&gt;true&lt;/master&gt;&lt;name&gt;Transfer FastShoes NFT&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;parent_flow display_value="Transfer FastShoes NFT"&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/parent_flow&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;system&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;status&gt;published&lt;/status&gt;&lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:47&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;55bc337e87ad595005a60d05dabb350b&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_overrides/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;/sys_hub_flow_snapshot&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_trigger_instance action="delete_multiple" query="flow=55bc337e87ad595005a60d05dabb350b^sys_idNOT INd1bc337e87ad595005a60d05dabb3537"/&gt;&lt;sys_hub_trigger_instance action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;55bc337e87ad595005a60d05dabb350b&lt;/flow&gt;&lt;name&gt;Service Catalog&lt;/name&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;d1bc337e87ad595005a60d05dabb3537&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:09&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Service Catalog"&gt;c43a1011c36813002841b63b12d3ae15&lt;/trigger_definition&gt;&lt;trigger_inputs/&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;service_catalog&lt;/trigger_type&gt;&lt;/sys_hub_trigger_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d1bc337e87ad595005a60d05dabb3537"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN15bc337e87ad595005a60d05dabb350c"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;55bc337e87ad595005a60d05dabb350b&lt;/id&gt;&lt;name&gt;Transfer FastShoes NFT&lt;/name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:47&lt;/sys_created_on&gt;&lt;sys_id&gt;15bc337e87ad595005a60d05dabb350c&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:47&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=15bc337e87ad595005a60d05dabb350c"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN95bc337e87ad595005a60d05dabb350d,d9bc337e87ad595005a60d05dabb3525"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value&gt;sc_req_item&lt;/default_value&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;40&lt;/max_length&gt;&lt;model display_value="Transfer FastShoes NFT"&gt;55bc337e87ad595005a60d05dabb350b&lt;/model&gt;&lt;model_id&gt;55bc337e87ad595005a60d05dabb350b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;true&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:47&lt;/sys_created_on&gt;&lt;sys_id&gt;95bc337e87ad595005a60d05dabb350d&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value="Reference"&gt;reference&lt;/internal_type&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;32&lt;/max_length&gt;&lt;model display_value="Transfer FastShoes NFT"&gt;55bc337e87ad595005a60d05dabb350b&lt;/model&gt;&lt;model_id&gt;55bc337e87ad595005a60d05dabb350b&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference display_value="" name="sc_req_item"&gt;sc_req_item&lt;/reference&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:47&lt;/sys_created_on&gt;&lt;sys_id&gt;d9bc337e87ad595005a60d05dabb3525&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_action_instance action="delete_multiple" query="flow=55bc337e87ad595005a60d05dabb350b^sys_idNOT IN9bee73fe87ad595005a60d05dabb35d5,d1bc337e87ad595005a60d05dabb3535"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="transfer1_nft"&gt;93f0e1e5471741101cf79454836d43d3&lt;/action_type&gt;&lt;action_type_parent display_value="transfer1_nft"&gt;e6f86eac471305101cf79454836d432f&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;55bc337e87ad595005a60d05dabb350b&lt;/flow&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;ui_id&gt;67b41610-6e27-499a-8e1f-8441c6949bbd&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=9bee73fe87ad595005a60d05dabb35d5"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/document_key&gt;&lt;order&gt;5&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;13ee73fe87ad595005a60d05dabb35d8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;value&gt;{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD43b98ffbb15f4110d4e113392f3899ba.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"sign_with\",\"mandatory\":\"true\",\"child_name\":\"sign_with_child0\",\"uiUniqueId\":\"fe9c1744-a0b3-45df-a8f9-d160d7e22dc4\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD43b98ffbb15f4110d4e113392f3899ba\",\"child_label\":\"sign_with_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"mapped\":\"{}\",\"child_type\":\"string\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"a89dc803-622a-4d46-81fe-b6b5ecc4f1c1\"}"}},"complexObject":{"name$":"FD43b98ffbb15f4110d4e113392f3899ba","$COCollectionField":["302a300506032b6570032100a1cc0911c997a847caf3dd7bda007d6b25d1bf02386cd1560dc84ccb928532ae"]},"serializationFormat":"JSON"}&lt;/value&gt;&lt;variable display_value="sign_with"&gt;1fb98ffb475f41101cf79454836d43cf&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;5fee73fe87ad595005a60d05dabb35d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;value&gt;0.0.48099955&lt;/value&gt;&lt;variable display_value="from"&gt;1bf0e1e5471741101cf79454836d43d6&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=9bee73fe87ad595005a60d05dabb35d5"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;from&lt;/field&gt;&lt;id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;dfee73fe87ad595005a60d05dabb35d6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;serial&lt;/field&gt;&lt;id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;dbee73fe87ad595005a60d05dabb35d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.serial_number}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;sign_with&lt;/field&gt;&lt;id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;93ee73fe87ad595005a60d05dabb35d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;to&lt;/field&gt;&lt;id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;57ee73fe87ad595005a60d05dabb35d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.account_id}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;token_id&lt;/field&gt;&lt;id&gt;9bee73fe87ad595005a60d05dabb35d5&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 13:05:29&lt;/sys_created_on&gt;&lt;sys_id&gt;1bee73fe87ad595005a60d05dabb35d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 13:05:29&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_93f0e1e5471741101cf79454836d43d3&lt;/table&gt;&lt;value&gt;{{5df04487-63d4-4e41-b8d8-130c395e5b82.token_id}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=9bee73fe87ad595005a60d05dabb35d5"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=9bee73fe87ad595005a60d05dabb35d5"/&gt;&lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;&lt;action_inputs/&gt;&lt;action_inputs/&gt;&lt;action_type display_value="Get Catalog Variables"&gt;330ba3abc31013002841b63b12d3aee8&lt;/action_type&gt;&lt;action_type_parent display_value="Get Catalog Variables"&gt;22f0b88cc3c632002841b63b12d3aeff&lt;/action_type_parent&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Transfer FastShoes NFT"&gt;55bc337e87ad595005a60d05dabb350b&lt;/flow&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;d1bc337e87ad595005a60d05dabb3535&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 12:23:07&lt;/sys_updated_on&gt;&lt;ui_id&gt;5df04487-63d4-4e41-b8d8-130c395e5b82&lt;/ui_id&gt;&lt;/sys_hub_action_instance&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=d1bc337e87ad595005a60d05dabb3535"/&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;d1bc337e87ad595005a60d05dabb3535&lt;/document_key&gt;&lt;order&gt;2&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;1dbc337e87ad595005a60d05dabb3536&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;value&gt;41fab77e87e9d19049d18777dabb3544:item_option_new,c01b33fa87e9d19049d18777dabb35cf:item_option_new,c9c5bf3a87e9d19049d18777dabb35a4:item_option_new,b2167f3a87e9d19049d18777dabb35d4:item_option_new&lt;/value&gt;&lt;variable display_value="Catalog Variables"&gt;7b0ba3abc31013002841b63b12d3aef7&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;&lt;document&gt;sys_hub_action_instance&lt;/document&gt;&lt;document_key&gt;d1bc337e87ad595005a60d05dabb3535&lt;/document_key&gt;&lt;order&gt;1&lt;/order&gt;&lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;ddbc337e87ad595005a60d05dabb3536&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;value&gt;8d547bf687e9d19049d18777dabb350b&lt;/value&gt;&lt;variable display_value="Template Catalog Items and Variable Sets"&gt;bb0ba3abc31013002841b63b12d3aef1&lt;/variable&gt;&lt;/sys_variable_value&gt;&lt;sys_element_mapping action="delete_multiple" query="id=d1bc337e87ad595005a60d05dabb3535"/&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;catalog_variables&lt;/field&gt;&lt;id&gt;d1bc337e87ad595005a60d05dabb3535&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;15bc337e87ad595005a60d05dabb3536&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;requested_item&lt;/field&gt;&lt;id&gt;d1bc337e87ad595005a60d05dabb3535&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;99bc337e87ad595005a60d05dabb3536&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value&gt;{{Service Catalog_1.request_item}}&lt;/value&gt;&lt;/sys_element_mapping&gt;&lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;&lt;field&gt;template_catalog_item&lt;/field&gt;&lt;id&gt;d1bc337e87ad595005a60d05dabb3535&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;d5bc337e87ad595005a60d05dabb3536&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;table&gt;var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8&lt;/table&gt;&lt;value/&gt;&lt;/sys_element_mapping&gt;&lt;sys_hub_input_scripts action="delete_multiple" query="instance=d1bc337e87ad595005a60d05dabb3535"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=d1bc337e87ad595005a60d05dabb3535"/&gt;&lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_flow_logic action="delete_multiple" query="flow=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b^sys_idNOT IN11bc337e87ad595005a60d05dabb352a,95bc337e87ad595005a60d05dabb3522"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;request_item&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Request Item&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:48&lt;/sys_created_on&gt;&lt;sys_id&gt;11bc337e87ad595005a60d05dabb352a&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:48&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-30 12:55:47&lt;/sys_created_on&gt;&lt;sys_id&gt;95bc337e87ad595005a60d05dabb3522&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-30 12:55:47&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_55bc337e87ad595005a60d05dabb350b"/&gt;&lt;sys_hub_flow action="UPDATE"&gt;&lt;sys_id&gt;a07cbb3e87ad595005a60d05dabb3548&lt;/sys_id&gt;&lt;latest_snapshot&gt;55bc337e87ad595005a60d05dabb350b&lt;/latest_snapshot&gt;&lt;compiler_build&gt;glide-sandiego-12-22-2021__patch5-06-22-2022_06-30-2022_1211.zip&lt;/compiler_build&gt;&lt;/sys_hub_flow&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-255303615</payload_hash>
+        <record_name>Transfer FastShoes NFT</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>alice</sys_created_by>
+        <sys_created_on>2022-08-31 12:23:11</sys_created_on>
+        <sys_id>d5de309f87ed995005a60d05dabb35e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182f3dafcee0000001</sys_recorded_at>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 12:23:11</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>9dde309fa0ed9950afebddc08b6330e4</update_guid>
+        <update_guid_history>9dde309fa0ed9950afebddc08b6330e4:-255303615,7fcefc5f76ed99507861ff53e59f6761:-200154846,9dcebc5f8aed995045b2b23e4faeb416:-294558770,88bcf4db18ed99504bcd80266f44730c:-981312773,a2ac74db3aed9950a3f6db29adc33568:-862599427,008cb0dbb5ed995006565e38e940c450:862429314,791c3c9b60ed9950019442a94ff57bb0:-1189138821,941cb89bdfed995025f06d66fc9084f6:1084199933,2e0c789bcfed995099e2be3e849d98fb:-1326063831,02c8f4d783ed995000b4d256498d93a6:-130843029,68c874d74eed9950c8f7c4d9b2bba4f4:1775304654,bab834d71eed99507f60f9fdd0d106e3:-1728682974,a8feb3fe34ad59509a1561af651a70fa:1860477127,feee73fe0ead5950c013c931befe5a3b:-348339473,f5deffbedcad5950cc1be0c72bd772d5:-245461587,e9bc337e36ad59504a48fa8b842ad195:693678350,81bcff3e7fad5950b9979cd13cd601fe:421357602,84acbf3e27ad595017949b868ec11aa7:925235365,6c7cfb3e65ad595023504b4d304f3710:-1441368669</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-05 17:56:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>0785de3566144424875413fdcb5a8e10</sys_id>
+        <sys_metadata>a07cbb3e87ad595005a60d05dabb3548</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transfer FastShoes NFT</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_a07cbb3e87ad595005a60d05dabb3548</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_a07cbb3e87ad595005a60d05dabb3548">d5de309f87ed995005a60d05dabb35e5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-05 17:56:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

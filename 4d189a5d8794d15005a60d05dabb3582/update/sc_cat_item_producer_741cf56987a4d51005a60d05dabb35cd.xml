@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <allow_edit>false</allow_edit>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <checked_out>false</checked_out>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p>Create Token</p>]]></description>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Create Token</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="System Admin">6816f79cc0a8016401c5a33be04be441</owner>
+        <picture/>
+        <post_insert_script><![CDATA[/**
+* This script is executed after the record is generated. 
+* `current` Is the GlideRecord produced by Record Producer. Use `current.update()` to update the record
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]></post_insert_script>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=741cf56987a4d51005a60d05dabb35cd&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <redirect_url>generated_record</redirect_url>
+        <request_method/>
+        <roles>snc_internal</roles>
+        <save_options/>
+        <save_script><![CDATA[/**
+* This script is executed at every step save in Catalog Builder. 
+* This script is executed before `Script` is executed.
+* `current` Is the GlideRecord produced by Record Producer. 
+* To access the variables, use `producer.var1` where var1 is the name of the variable
+* To access the Record Producer use `cat_item`
+*/]]></save_script>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <script><![CDATA[try {
+    var inputs = {};
+
+    var treasury_account = new GlideRecord("x_snc_hhoverlay_account")
+    treasury_account.get(producer.treasury_account)
+
+    var rem_treasury_account = new GlideRecord("x_snc_hhoverlay_st_account")
+    rem_treasury_account.get(treasury_account.account_id)
+
+    var sign_with = new GlideRecord("x_snc_hhoverlay_key")
+    sign_with.addQuery("public_key", "ENDSWITH", rem_treasury_account.key_suffix)
+        .addOrCondition("sys_id", producer.admin_key.toString())
+        .addOrCondition("sys_id", producer.supply_key.toString())
+        .addOrCondition("sys_id", producer.pause_key.toString())
+        .addOrCondition("sys_id", producer.freeze_key.toString())
+        .addOrCondition("sys_id", producer.kyc_key.toString())
+        .addOrCondition("sys_id", producer.wipe_key.toString())
+    sign_with.query()
+    inputs['sign_with'] = sign_with; // List 
+
+    inputs['name'] = producer.name.toString(); // String 
+    inputs['local_name'] = producer.name.toString()
+    inputs['symbol'] = producer.symbol.toString(); // String 
+    inputs['type'] = producer.type.toString(); // Choice 
+    inputs['treasury_account'] = treasury_account // Reference 
+
+    if (producer.memo.toString() != '') {
+        inputs['memo'] = producer.memo.toString();
+    } // String 
+
+    if (producer.initial_supply.toString() != '') {
+        inputs['initial_supply'] = producer.initial_supply.toString();
+    } // String 
+
+    if (producer.decimals.toString() != '') {
+        inputs['decimals'] = producer.decimals.toString();
+    } // String 
+
+    if (producer.supply_type.toString() != '') {
+        inputs['supply_type'] = producer.supply_type.toString();
+    } // String 
+
+    if (producer.max_supply.toString() != '') {
+        inputs['max_supply'] = producer.max_supply.toString();
+    } // String 
+
+    if (producer.admin_key) {
+        var admin_key = new GlideRecord("x_snc_hhoverlay_key")
+        admin_key.get(producer.admin_key)
+        inputs['admin_key'] = admin_key
+    } // String 
+
+    if (producer.supply_key) {
+        var supply_key = new GlideRecord("x_snc_hhoverlay_key")
+        supply_key.get(producer.supply_key)
+        inputs['supply_key'] = supply_key
+    } // String 
+
+    if (producer.pause_key) {
+        var pause_key = new GlideRecord("x_snc_hhoverlay_key")
+        pause_key.get(producer.pause_key)
+        inputs['pause_key'] = pause_key
+    } // String 
+
+    if (producer.freeze_key) {
+        var freeze_key = new GlideRecord("x_snc_hhoverlay_key")
+        freeze_key.get(producer.freeze_key)
+        inputs['freeze_key'] = freeze_key
+    } // String 
+
+    if (producer.kyc_key) {
+        var kyc_key = new GlideRecord("x_snc_hhoverlay_key")
+        kyc_key.get(producer.kyc_key)
+        inputs['kyc_key'] = kyc_key
+
+    } // String 
+
+    if (producer.wipe_key) {
+        var wipe_key = new GlideRecord("x_snc_hhoverlay_key")
+        wipe_key.get(producer.wipe_key)
+        inputs['wipe_key'] = wipe_key
+    } // String 
+
+    var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_hhoverlay.create_token').inForeground().withInputs(inputs).run();
+    var outputs = result.getOutputs();
+
+    var token = outputs['token']; // Reference
+    var transaction = outputs['transaction']; // Reference
+
+    producer.redirect = token.getLink(true);
+
+} catch (e) {
+    var message = ex.getMessage();
+    gs.addErrorMessage(message);
+}]]></script>
+        <short_description>Create Token</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state>published</state>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-07 13:20:42</sys_created_on>
+        <sys_id>741cf56987a4d51005a60d05dabb35cd</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>Create Token</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sc_cat_item_producer_741cf56987a4d51005a60d05dabb35cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-30 12:03:37</sys_updated_on>
+        <table_name>x_snc_hhoverlay_req</table_name>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=741cf56987a4d51005a60d05dabb35cd"/>
+    <fx_price action="delete_multiple" query="id=741cf56987a4d51005a60d05dabb35cd"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>741cf56987a4d51005a60d05dabb35cd</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-07 13:20:42</sys_created_on>
+        <sys_id>ef8cb96987a4d51005a60d05dabb3597</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-07 13:20:42</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

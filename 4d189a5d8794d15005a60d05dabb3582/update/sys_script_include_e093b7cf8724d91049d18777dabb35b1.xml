@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_hhoverlay.Utils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Utils</name>
+        <script><![CDATA[var Utils = Class.create();
+Utils.prototype = {
+    initialize: function() {},
+    add_comma: function(str, decimals) {
+        if (str.length <= decimals) {
+            str = ('0'.repeat(decimals - str.length + 1)) + str;
+        }
+        x = str.substring(0, str.length - decimals) + '.' + str.substring(str.length - decimals);
+        x = x.replace(/0*$/, "");
+		x = x.replace(/\.$/, "")
+        return x;
+    },
+	remove_comma: function(str, decimals) {
+		var str2, str3, str4
+		var RegExp = /\./g;
+		if (!RegExp.test(str)) { str2 = str + '.0' } else { str2 = str }
+		gs.info(str2)
+		var chars_after_comma = str2.split('.')[1].length
+		gs.info(chars_after_comma)
+		if ( chars_after_comma < 3) { var str3 = str2 + '0'.repeat(3 - chars_after_comma) } else { str3 = str2}
+		gs.info(str3)
+		var str4 = str3.replace(/\./, "")
+		gs.info(str4)
+		return str4;
+	},
+    tx_output: function(tx, cmdout, result) {
+        try {
+            tx.output = cmdout;
+            output = JSON.parse(cmdout);
+            tx.transaction_id = output.resp.transactionId;
+            tx.transaction_hash = output.resp.transactionHash;
+            tx.transaction_fee = output.record.transactionFee;
+
+            if (output.receipt.status == 'SUCCESS') {
+                tx.status = 'completed';
+                tx.hedera_status = output.receipt.status;
+            } else {
+                throw Error("Hedera status is not success");
+            }
+        } catch (e) {
+            gs.error(e);
+            tx.out_parsing_log = e.toString();
+            tx.hedera_status = output.error.status;
+            tx.status = 'failed';
+        } finally {
+            tx.update();
+        }
+    },
+    type: 'Utils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-12 13:51:58</sys_created_on>
+        <sys_id>e093b7cf8724d91049d18777dabb35b1</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Utils</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_script_include_e093b7cf8724d91049d18777dabb35b1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-27 12:02:10</sys_updated_on>
+    </sys_script_include>
+</record_update>

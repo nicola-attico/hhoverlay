@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>Balance</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+
+    a = new GlideRecord("x_snc_hhoverlay_account")
+    a.query()
+    while (a.next()) {
+        //gs.addInfoMessage(a.getValue("account_id"))
+
+        try {
+            var inputs = {};
+            inputs['account_id'] = a.getValue("account_id"); // String 
+
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.q_account_balance').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            var response = outputs['response']; // String
+
+            //gs.addInfoMessage("response " + response)
+            //var tokens = JSON.parse(response).balance.tokens
+            var tokens = JSON.parse(response).resp.tokens
+            //gs.addInfoMessage(JSON.stringify(tokens))
+
+            for (i = 0; i < tokens.length; i++) {
+                var t = new GlideRecord("x_snc_hhoverlay_token")
+                if (t.get("token_id", tokens[i].tokenId)) {
+                    var balance = tokens[i].balance.toString()
+					
+                    row = {
+                        sys_id: a.account_id + "@" + tokens[i].tokenId.toString(),
+                        balance: tokens[i].balance.toString(),
+                        token: t.sys_id,
+                        token_id: tokens[i].tokenId,
+                        account: a.sys_id,
+                        account_id: a.account_id,
+                        decimals: tokens[i].decimals,
+                        fmt_balance: new Utils().add_comma(tokens[i].balance.toString(), Number(tokens[i].decimals))
+                    }
+
+                    v_table.addRow(row)
+                }
+            }
+
+        } catch (ex) {
+            gs.error(JSON.stringify(ex));
+        }
+
+    }
+
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-07 13:24:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>026d7da987a4d51005a60d05dabb351e</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>Balance</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_script_vtable_026d7da987a4d51005a60d05dabb351e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-26 13:30:40</sys_updated_on>
+        <table>x_snc_hhoverlay_st_balance</table>
+    </sys_script_vtable>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD3349fbf7c57c15100564aed222e70cf2</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>4d189a5d8794d15005a60d05dabb3582</scope_name>
+        <serialized_content>{"FlowDesigner:FD3349fbf7c57c15100564aed222e70cf2":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD3349fbf7c57c15100564aed222e70cf2.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"token_array\",\"mandatory\":\"false\",\"child_name\":\"token_array_child0\",\"uiUniqueId\":\"df888b5c-fe44-49c1-8f86-754bc4b18958\",\"uiTypeLabel\":\"Array.String\",\"co_type_name\":\"FD3349fbf7c57c15100564aed222e70cf2\",\"child_label\":\"token_array_child0\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.string\",\"child_defaultValue\":\"\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"bf1be660-7108-48c4-bcd2-baa419eb9196\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-27 08:27:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f349fbf7877c151005a60d05dabb35f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FD3349fbf7c57c15100564aed222e70cf2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_complex_object_f349fbf7877c151005a60d05dabb35f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-27 08:27:52</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="DELETE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref display_value="ft">682c953e8760991049d18777dabb35be</published_ref>
+        <question display_value="Type">9e9f36d587f4d15005a60d05dabb35bc</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:50:50</sys_created_on>
+        <sys_id>d69f36d587f4d15005a60d05dabb35ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ft</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>question_choice_d69f36d587f4d15005a60d05dabb35ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:50:50</sys_updated_on>
+        <text>ft</text>
+        <value>ft</value>
+    </question_choice>
+    <fx_price action="DELETE" query="id=d69f36d587f4d15005a60d05dabb35ca"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>question_choice_d69f36d587f4d15005a60d05dabb35ca</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice"><question_choice action="INSERT_OR_UPDATE"><inactive>false</inactive><order>100</order><published_ref display_value="ft">682c953e8760991049d18777dabb35be</published_ref><question display_value="Type">9e9f36d587f4d15005a60d05dabb35bc</question><sys_class_name>question_choice</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-07-19 09:50:50</sys_created_on><sys_id>d69f36d587f4d15005a60d05dabb35ca</sys_id><sys_mod_count>0</sys_mod_count><sys_name>ft</sys_name><sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package><sys_policy/><sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope><sys_update_name>question_choice_d69f36d587f4d15005a60d05dabb35ca</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-07-19 09:50:50</sys_updated_on><text>ft</text><value>ft</value></question_choice><fx_price action="delete_multiple" query="id=d69f36d587f4d15005a60d05dabb35ca"/></record_update>]]></payload>
+        <payload_hash>-1425534064</payload_hash>
+        <record_name>ft</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:50:50</sys_created_on>
+        <sys_id>9e9f36d587f4d15005a60d05dabb35cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18215de0ef20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:50:50</sys_updated_on>
+        <type>Question Choice</type>
+        <update_guid>d29f36d501f4d150d40003e251e22fcc</update_guid>
+        <update_guid_history>d29f36d501f4d150d40003e251e22fcc:-1425534064</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ft">19dffad587f4d15005a60d05dabb35c0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:51:51</sys_created_on>
+        <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
+        <sys_id>0969b742b0c74ad48853e53253b49a90</sys_id>
+        <sys_metadata>d69f36d587f4d15005a60d05dabb35ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ft</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>question_choice_d69f36d587f4d15005a60d05dabb35ca</sys_update_name>
+        <sys_update_version display_value="question_choice_d69f36d587f4d15005a60d05dabb35ca">9e9f36d587f4d15005a60d05dabb35cc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:51:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

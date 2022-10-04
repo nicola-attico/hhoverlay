@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_snc_hhoverlay.key_permission_user" name="x_snc_hhoverlay.key_permission_user">1a2341128750911005a60d05dabb3529</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-27 06:49:41</sys_created_on>
+        <sys_id>da2341128750911005a60d05dabb352b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1a2341128750911005a60d05dabb3529</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_embedded_help_role_da2341128750911005a60d05dabb352b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-27 06:49:41</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

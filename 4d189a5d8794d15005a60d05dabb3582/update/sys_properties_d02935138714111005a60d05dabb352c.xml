@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>app / testnet</choices>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_snc_hhoverlay.dragonglass</name>
+        <read_roles/>
+        <suffix>dragonglass</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-30 13:19:57</sys_created_on>
+        <sys_id>d02935138714111005a60d05dabb352c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_hhoverlay.dragonglass</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_properties_d02935138714111005a60d05dabb352c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-30 13:19:57</sys_updated_on>
+        <type>string</type>
+        <value>testnet</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=d02935138714111005a60d05dabb352c"/>
+</record_update>

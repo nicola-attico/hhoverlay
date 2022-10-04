@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="NFT" max_length="40" name="x_snc_hhoverlay_nft" sizeclass="4" type="collection">
+        <element label="Creation Transaction" max_length="32" name="creation_transaction" reference="x_snc_hhoverlay_transaction" type="reference"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;return current.name&#13;&#10;&#13;&#10;})(current);" label="NFT" max_length="32" name="nft" reference="x_snc_hhoverlay_st_nft" type="reference" virtual="true"/>
+        <element label="Serial" max_length="50" name="serial" type="string"/>
+        <element label="Token" max_length="32" name="token" reference="x_snc_hhoverlay_token" type="reference"/>
+        <index name="index">
+            <element name="creation_transaction"/>
+        </index>
+        <index name="index2">
+            <element name="nft"/>
+        </index>
+        <index name="index3">
+            <element name="token"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="DELETE">
+        <catalog_item display_value="Create Token">741cf56987a4d51005a60d05dabb35cd</catalog_item>
+        <catalog_variable>IO:dc2d117e8760991049d18777dabb35f9</catalog_variable>
+        <cleared>true</cleared>
+        <disabled>false</disabled>
+        <field/>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 08:04:07</sys_created_on>
+        <sys_id>c70a8af687c51d1049d18777dabb35c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>max_supply</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_c70a8af687c51d1049d18777dabb35c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 08:04:07</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Manage supply type">7bb946f687c51d1049d18777dabb35c1</ui_policy>
+        <variable>max_supply</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>catalog_ui_policy_action_c70a8af687c51d1049d18777dabb35c3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action"><catalog_ui_policy_action action="INSERT_OR_UPDATE"><catalog_item display_value="Create Token">741cf56987a4d51005a60d05dabb35cd</catalog_item><catalog_variable>IO:dc2d117e8760991049d18777dabb35f9</catalog_variable><cleared>true</cleared><disabled>false</disabled><field/><mandatory>true</mandatory><order>100</order><sys_class_name>catalog_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-08-05 08:04:07</sys_created_on><sys_id>c70a8af687c51d1049d18777dabb35c3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>max_supply</sys_name><sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package><sys_policy/><sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope><sys_update_name>catalog_ui_policy_action_c70a8af687c51d1049d18777dabb35c3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-08-05 08:04:07</sys_updated_on><table/><ui_policy display_value="Manage supply type">7bb946f687c51d1049d18777dabb35c1</ui_policy><variable>max_supply</variable><variable_set/><visible>ignore</visible></catalog_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-823575080</payload_hash>
+        <record_name>max_supply</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 08:04:07</sys_created_on>
+        <sys_id>783a8af687c51d1049d18777dabb35cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1826d08773c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 08:04:07</sys_updated_on>
+        <type>Catalog UI Policy Action</type>
+        <update_guid>703a8af68fc51d10eb49a71e60c0d8cc</update_guid>
+        <update_guid_history>703a8af68fc51d10eb49a71e60c0d8cc:-823575080</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="max_supply">63ffde7687091d1049d18777dabb35cd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-05 09:39:20</sys_created_on>
+        <sys_db_object display_value="" name="catalog_ui_policy_action">catalog_ui_policy_action</sys_db_object>
+        <sys_id>920efce7325347089cf4e16796785c64</sys_id>
+        <sys_metadata>c70a8af687c51d1049d18777dabb35c3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>max_supply</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>catalog_ui_policy_action_c70a8af687c51d1049d18777dabb35c3</sys_update_name>
+        <sys_update_version display_value="catalog_ui_policy_action_c70a8af687c51d1049d18777dabb35c3">783a8af687c51d1049d18777dabb35cc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-05 09:39:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

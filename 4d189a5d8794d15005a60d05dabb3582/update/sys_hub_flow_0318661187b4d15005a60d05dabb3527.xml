@@ -1,0 +1,1745 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>mint_nft</internal_name>
+        <label_cache>[{"name":"subflow.token","label":"Input➛Token","reference":"x_snc_hhoverlay_token","reference_display":"Token","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"8ff3ca83-fa89-4789-bfc8-9d5f3474ae80"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.__dont_treat_as_error__","label":"6 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.__action_status__","label":"6 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.table_name","label":"6 - Create Record➛NFT Table","reference":"x_snc_hhoverlay_nft","reference_display":"NFT","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.record","label":"6 - Create Record➛NFT Record","reference":"x_snc_hhoverlay_nft","reference_display":"NFT","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item","label":"5 - For Each➛serials_child0","reference_display":"serials_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c77fb651-d067-42da-834f-d47b4720f44f.scheduled_end_date_time","label":"3 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"c77fb651-d067-42da-834f-d47b4720f44f.total_duration","label":"3 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.table_name","label":"4 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.record","label":"4 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.token.token_id","label":"Input➛Token➛Token Id","reference":"","reference_display":"Token Id","type":"string","base_type":"string","parent_table_name":"x_snc_hhoverlay_token","column_name":"token_id"},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.serials","label":"2 - mint_nft➛serials","reference_display":"serials","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD136eb6196f6f8510a2ab93dc192acf10","child_label":"serials_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"serials_child0","child_uiUniqueId":"e31adcf1-8d2f-4cc3-ae27-36e039478c54","uiUniqueId":"8cb3a56d-f231-4885-bde2-dba47b77f0eb"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.consensus_timestamp","label":"2 - mint_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f4aefc5e-d7df-4e89-b515-92e9ecdd0357"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.hstatus","label":"2 - mint_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8922481f-1418-4681-bade-d0e461f6855c"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.fail","label":"2 - mint_nft➛fail","reference_display":"fail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8a36e0d8-a7c5-47e8-9987-c56973d1d766"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.response","label":"2➛response","reference_display":"response","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"beba5b01-5b51-4538-857e-93bd072ea42d"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.__dont_treat_as_error__","label":"2 - mint_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"df1d73f7-e050-42e1-b9bf-39415fec6d4d"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.__action_status__","label":"2 - mint_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"09f171b8-7a9c-4b62-a3c5-4de12fa193d3"}},{"name":"subflow.sign_with","label":"Input➛sign_with","reference":"x_snc_hhoverlay_key","reference_display":"Key","type":"glide_list","base_type":"glide_list","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"f9826b1f-8f3d-4d31-92a4-7104376e62e5"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.__dont_treat_as_error__","label":"1 - Convert key list in public_key array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"0e491945-e651-4d3a-bdcd-73f85c939667"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.__action_status__","label":"1 - Convert key list in public_key array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDac804efae2e0991076a6892df89febe6","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"171df4fa-b03b-4dc3-8076-5fe0fce6e30a"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.key_array","label":"1 - Convert key list in public_key array➛key_array","reference_display":"key_array","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDa8804efacee09910239373c414c120e4","child_label":"key_array_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"key_array_child0","child_uiUniqueId":"14f1888b-5ad6-4351-9597-8e1502a384ca","uiUniqueId":"f014b227-171f-4253-ad5e-a46dc64d87c9"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id","label":"2 - mint_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"60008e52-33c3-4d9f-b39f-592d300715e9"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_hash","label":"2 - mint_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3e89c905-457e-4889-a978-5b80f9a8188e"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.record","label":"4 - Create Record➛Transaction Record","reference":"x_snc_hhoverlay_transaction","reference_display":"Transaction","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.table_name","label":"4 - Create Record➛Transaction Table","reference":"x_snc_hhoverlay_transaction","reference_display":"Transaction","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.metadata","label":"Input➛Metadata","reference":"","reference_display":"","type":"array.string","base_type":"array.string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2885b70-2fbd-4256-a785-60e94bd23cb0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>bb41f25987b4d15005a60d05dabb355c</master_snapshot>
+        <name>Mint NFT</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:08:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0318661187b4d15005a60d05dabb3527</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Mint NFT</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_hub_flow_0318661187b4d15005a60d05dabb3527</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:23</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=0318661187b4d15005a60d05dabb3527"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0318661187b4d15005a60d05dabb3527"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527^id=0318661187b4d15005a60d05dabb3527"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=0318661187b4d15005a60d05dabb3527"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=0318661187b4d15005a60d05dabb3527"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=0318661187b4d15005a60d05dabb3527^sys_idNOT INcf18661187b4d15005a60d05dabb3528"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>0318661187b4d15005a60d05dabb3527</id>
+        <name>Mint NFT</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:08:13</sys_created_on>
+        <sys_id>cf18661187b4d15005a60d05dabb3528</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:08:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=cf18661187b4d15005a60d05dabb3528"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=0318661187b4d15005a60d05dabb3527^sys_idNOT IN55207ed587b4d15005a60d05dabb358b,a5207ed587b4d15005a60d05dabb3591,a5207ed587b4d15005a60d05dabb3594"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8ff3ca83-fa89-4789-bfc8-9d5f3474ae80</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_token</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Token</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</model>
+        <model_id>0318661187b4d15005a60d05dabb3527</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_token">x_snc_hhoverlay_token</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=nft</reference_qual>
+        <reference_qual_condition table="x_snc_hhoverlay_token">type=nft<item display_value="NON-FUNGIBLE TOKEN" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="nft"/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:19</sys_created_on>
+        <sys_id>55207ed587b4d15005a60d05dabb358b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Metadata_child0,child_name=metadata_child0,child_type=string,child_type_label=String,child_uiUniqueId=4018cdef-a8d6-4ba6-b834-1e646df78a73,co_type_name=FDd91c3ad1edf4d150ab73dfc5fbb6c68f,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=d2885b70-2fbd-4256-a785-60e94bd23cb0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>metadata</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Metadata</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</model>
+        <model_id>0318661187b4d15005a60d05dabb3527</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>a5207ed587b4d15005a60d05dabb3591</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:35:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_list,uiTypeLabel=List,uiUniqueId=f9826b1f-8f3d-4d31-92a4-7104376e62e5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_key</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sign_with</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_list</internal_type>
+        <label>sign_with</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</model>
+        <model_id>0318661187b4d15005a60d05dabb3527</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_key">x_snc_hhoverlay_key</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>a5207ed587b4d15005a60d05dabb3594</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=0318661187b4d15005a60d05dabb3527^sys_idNOT IN25207ed587b4d15005a60d05dabb35a1"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c79ff2f7-f8b1-42ba-80c7-50000694108c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_transaction</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>transaction</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>transaction</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</model>
+        <model_id>0318661187b4d15005a60d05dabb3527</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_transaction">x_snc_hhoverlay_transaction</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>25207ed587b4d15005a60d05dabb35a1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:19:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0318661187b4d15005a60d05dabb3527"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=0318661187b4d15005a60d05dabb3527^sys_idNOT IN39207ed587b4d15005a60d05dabb35d3,adc03a1987b4d15005a60d05dabb35b3,f920bed587b4d15005a60d05dabb3500,f920bed587b4d15005a60d05dabb350d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Convert key list in public_key array">94804efa87e0991049d18777dabb35ab</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>39207ed587b4d15005a60d05dabb35d3</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-02 13:47:32</sys_updated_on>
+        <ui_id>67f1ce1e-51c6-4136-aece-7d50b82210f6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=39207ed587b4d15005a60d05dabb35d3"/>
+    <sys_element_mapping action="delete_multiple" query="id=39207ed587b4d15005a60d05dabb35d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>key_list</field>
+        <id>39207ed587b4d15005a60d05dabb35d3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>bd207ed587b4d15005a60d05dabb35e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_94804efa87e0991049d18777dabb35ab</table>
+        <value>{{subflow.sign_with}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=39207ed587b4d15005a60d05dabb35d3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=39207ed587b4d15005a60d05dabb35d3"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <order>4</order>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>adc03a1987b4d15005a60d05dabb35b3</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-02 13:47:32</sys_updated_on>
+        <ui_id>70322f83-0c9d-433c-ba36-11f20c043474</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=adc03a1987b4d15005a60d05dabb35b3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>adc03a1987b4d15005a60d05dabb35b3</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>65c03a1987b4d15005a60d05dabb35b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:46:04</sys_updated_on>
+        <value>x_snc_hhoverlay_transaction</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>adc03a1987b4d15005a60d05dabb35b3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>a1c03a1987b4d15005a60d05dabb35b5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:08:22</sys_updated_on>
+        <value/>
+        <variable display_value="Fields">6de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=adc03a1987b4d15005a60d05dabb35b3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>adc03a1987b4d15005a60d05dabb35b3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>6dc03a1987b4d15005a60d05dabb35b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:46:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>adc03a1987b4d15005a60d05dabb35b3</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>21c03a1987b4d15005a60d05dabb35b5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-29 12:07:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>transaction_id={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id}}^transaction_hash={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_hash}}^consensus_timestamp={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.consensus_timestamp}}^status={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.hstatus}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=adc03a1987b4d15005a60d05dabb35b3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=adc03a1987b4d15005a60d05dabb35b3"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="mint_nft">40db796d475741101cf79454836d4373</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>f920bed587b4d15005a60d05dabb3500</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-02 13:47:32</sys_updated_on>
+        <ui_id>41ed64e1-43ae-4e6b-b795-b1dc5b17102a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f920bed587b4d15005a60d05dabb3500"/>
+    <sys_element_mapping action="delete_multiple" query="id=f920bed587b4d15005a60d05dabb3500"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>metadata</field>
+        <id>f920bed587b4d15005a60d05dabb3500</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>f120bed587b4d15005a60d05dabb3502</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:35:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{subflow.metadata}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sign_with</field>
+        <id>f920bed587b4d15005a60d05dabb3500</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>b520bed587b4d15005a60d05dabb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{67f1ce1e-51c6-4136-aece-7d50b82210f6.key_array}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>token_id</field>
+        <id>f920bed587b4d15005a60d05dabb3500</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>7920bed587b4d15005a60d05dabb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{subflow.token.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f920bed587b4d15005a60d05dabb3500"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f920bed587b4d15005a60d05dabb3500"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <order>6</order>
+        <parent_ui_id>c9fd8fc1-6afe-4d6c-93b8-6ce23002319b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>f920bed587b4d15005a60d05dabb350d</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-02 13:47:32</sys_updated_on>
+        <ui_id>d9719aaa-c3de-4f0d-a99d-312b56830026</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f920bed587b4d15005a60d05dabb350d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f920bed587b4d15005a60d05dabb350d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>4620bed587b4d15005a60d05dabb350f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <value>x_snc_hhoverlay_nft</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f920bed587b4d15005a60d05dabb350d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>f920bed587b4d15005a60d05dabb350d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>0220bed587b4d15005a60d05dabb350f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f920bed587b4d15005a60d05dabb350d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>c220bed587b4d15005a60d05dabb350f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:25:12</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>serial={{c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item}}^token={{subflow.token}}^creation_transaction={{70322f83-0c9d-433c-ba36-11f20c043474.record}}^name={{c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item}}@{{subflow.token.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f920bed587b4d15005a60d05dabb350d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f920bed587b4d15005a60d05dabb350d"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=0318661187b4d15005a60d05dabb3527"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=0318661187b4d15005a60d05dabb3527^sys_idNOT IN3120bed587b4d15005a60d05dabb3507,5f26c39d87f4d15005a60d05dabb3523,f520bed587b4d15005a60d05dabb3503"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7d20bed587b4d15005a60d05dabb3506</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>3120bed587b4d15005a60d05dabb3507</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:23</sys_updated_on>
+        <ui_id>c9fd8fc1-6afe-4d6c-93b8-6ce23002319b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=3120bed587b4d15005a60d05dabb3507"/>
+    <sys_element_mapping action="delete_multiple" query="id=3120bed587b4d15005a60d05dabb3507"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>3120bed587b4d15005a60d05dabb3507</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>bd20bed587b4d15005a60d05dabb3509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:21</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.serials}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527^id=3120bed587b4d15005a60d05dabb3507"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=3120bed587b4d15005a60d05dabb3507"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3120bed587b4d15005a60d05dabb3507"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9326c39d87f4d15005a60d05dabb3523</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned>transaction</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 10:19:34</sys_created_on>
+        <sys_id>5f26c39d87f4d15005a60d05dabb3523</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:23</sys_updated_on>
+        <ui_id>d9c056fe-18ae-4d79-822c-4319b2706734</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5f26c39d87f4d15005a60d05dabb3523"/>
+    <sys_element_mapping action="delete_multiple" query="id=5f26c39d87f4d15005a60d05dabb3523"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>transaction</field>
+        <id>5f26c39d87f4d15005a60d05dabb3523</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 10:19:34</sys_created_on>
+        <sys_id>db26c39d87f4d15005a60d05dabb3526</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:19:34</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527</table>
+        <value>{{70322f83-0c9d-433c-ba36-11f20c043474.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5f26c39d87f4d15005a60d05dabb3523"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f26c39d87f4d15005a60d05dabb3523"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">bd20bed587b4d15005a60d05dabb3502</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:21</sys_created_on>
+        <sys_id>f520bed587b4d15005a60d05dabb3503</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:23</sys_updated_on>
+        <ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=f520bed587b4d15005a60d05dabb3503"/>
+    <sys_element_mapping action="delete_multiple" query="id=f520bed587b4d15005a60d05dabb3503"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>f520bed587b4d15005a60d05dabb3503</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:46:04</sys_created_on>
+        <sys_id>61c03a1987b4d15005a60d05dabb35b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:46:04</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527^id=f520bed587b4d15005a60d05dabb3503"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=f520bed587b4d15005a60d05dabb3503"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f520bed587b4d15005a60d05dabb3503"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=0318661187b4d15005a60d05dabb3527"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=0318661187b4d15005a60d05dabb3527"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527^sys_idNOT IN29207ed587b4d15005a60d05dabb3598,e9207ed587b4d15005a60d05dabb3590,e9207ed587b4d15005a60d05dabb3593"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sign_with</element>
+        <help/>
+        <hint/>
+        <label>sign_with</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>29207ed587b4d15005a60d05dabb3598</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>token</element>
+        <help/>
+        <hint/>
+        <label>Token</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>e9207ed587b4d15005a60d05dabb3590</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>metadata</element>
+        <help/>
+        <hint/>
+        <label>Metadata</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>e9207ed587b4d15005a60d05dabb3593</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_0318661187b4d15005a60d05dabb3527"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527^sys_idNOT INe9207ed587b4d15005a60d05dabb35ca"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>transaction</element>
+        <help/>
+        <hint/>
+        <label>transaction</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:43:20</sys_created_on>
+        <sys_id>e9207ed587b4d15005a60d05dabb35ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:43:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_0318661187b4d15005a60d05dabb3527"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=0318661187b4d15005a60d05dabb3527"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=0318661187b4d15005a60d05dabb3527^sys_idNOT INc951365987b4d15005a60d05dabb35c2"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"c951365987b4d15005a60d05dabb35c2","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</plan_id>
+        <snapshot>7d0cf7b9878d591049d18777dabb35cf</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c951365987b4d15005a60d05dabb35c2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:23</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>mint_nft</internal_name>
+        <label_cache>[{"name":"subflow.token","label":"Input➛Token","reference":"x_snc_hhoverlay_token","reference_display":"Token","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"8ff3ca83-fa89-4789-bfc8-9d5f3474ae80"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.__dont_treat_as_error__","label":"6 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.__action_status__","label":"6 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.table_name","label":"6 - Create Record➛NFT Table","reference":"x_snc_hhoverlay_nft","reference_display":"NFT","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d9719aaa-c3de-4f0d-a99d-312b56830026.record","label":"6 - Create Record➛NFT Record","reference":"x_snc_hhoverlay_nft","reference_display":"NFT","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item","label":"5 - For Each➛serials_child0","reference_display":"serials_child0","type":"string","base_type":"string","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"c77fb651-d067-42da-834f-d47b4720f44f.scheduled_end_date_time","label":"3 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"c77fb651-d067-42da-834f-d47b4720f44f.total_duration","label":"3 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.table_name","label":"4 - Create Record➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3c8b1cbd-cb33-43c6-86de-24e64f1f23e9.record","label":"4 - Create Record➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.token.token_id","label":"Input➛Token➛Token Id","reference":"","reference_display":"Token Id","type":"string","base_type":"string","parent_table_name":"x_snc_hhoverlay_token","column_name":"token_id"},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.serials","label":"2 - mint_nft➛serials","reference_display":"serials","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD136eb6196f6f8510a2ab93dc192acf10","child_label":"serials_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"serials_child0","child_uiUniqueId":"e31adcf1-8d2f-4cc3-ae27-36e039478c54","uiUniqueId":"8cb3a56d-f231-4885-bde2-dba47b77f0eb"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.consensus_timestamp","label":"2 - mint_nft➛consensus_timestamp","reference_display":"consensus_timestamp","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"f4aefc5e-d7df-4e89-b515-92e9ecdd0357"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.hstatus","label":"2 - mint_nft➛hstatus","reference_display":"hstatus","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8922481f-1418-4681-bade-d0e461f6855c"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.fail","label":"2 - mint_nft➛fail","reference_display":"fail","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"8a36e0d8-a7c5-47e8-9987-c56973d1d766"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.response","label":"2➛response","reference_display":"response","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"beba5b01-5b51-4538-857e-93bd072ea42d"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.__dont_treat_as_error__","label":"2 - mint_nft➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"df1d73f7-e050-42e1-b9bf-39415fec6d4d"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.__action_status__","label":"2 - mint_nft➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"09f171b8-7a9c-4b62-a3c5-4de12fa193d3"}},{"name":"subflow.sign_with","label":"Input➛sign_with","reference":"x_snc_hhoverlay_key","reference_display":"Key","type":"glide_list","base_type":"glide_list","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"f9826b1f-8f3d-4d31-92a4-7104376e62e5"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.__dont_treat_as_error__","label":"1 - Convert key list in public_key array➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"0e491945-e651-4d3a-bdcd-73f85c939667"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.__action_status__","label":"1 - Convert key list in public_key array➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDac804efae2e0991076a6892df89febe6","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"171df4fa-b03b-4dc3-8076-5fe0fce6e30a"}},{"name":"67f1ce1e-51c6-4136-aece-7d50b82210f6.key_array","label":"1 - Convert key list in public_key array➛key_array","reference_display":"key_array","type":"array.string","base_type":"array.string","attributes":{"uiTypeLabel":"Array.String","co_type_name":"FDa8804efacee09910239373c414c120e4","child_label":"key_array_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"key_array_child0","child_uiUniqueId":"14f1888b-5ad6-4351-9597-8e1502a384ca","uiUniqueId":"f014b227-171f-4253-ad5e-a46dc64d87c9"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id","label":"2 - mint_nft➛transaction_id","reference_display":"transaction_id","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"60008e52-33c3-4d9f-b39f-592d300715e9"}},{"name":"41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_hash","label":"2 - mint_nft➛transaction_hash","reference_display":"transaction_hash","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"3e89c905-457e-4889-a978-5b80f9a8188e"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.record","label":"4 - Create Record➛Transaction Record","reference":"x_snc_hhoverlay_transaction","reference_display":"Transaction","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.table_name","label":"4 - Create Record➛Transaction Table","reference":"x_snc_hhoverlay_transaction","reference_display":"Transaction","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"70322f83-0c9d-433c-ba36-11f20c043474.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.metadata","label":"Input➛Metadata","reference":"","reference_display":"","type":"array.string","base_type":"array.string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d2885b70-2fbd-4256-a785-60e94bd23cb0","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>Mint NFT</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Mint NFT">0318661187b4d15005a60d05dabb3527</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb41f25987b4d15005a60d05dabb355c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_variable_value action="delete_multiple" query="document_key=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c^id=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=bb41f25987b4d15005a60d05dabb355c^sys_idNOT INff41f25987b4d15005a60d05dabb355d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>bb41f25987b4d15005a60d05dabb355c</id>
+        <name>Mint NFT</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>ff41f25987b4d15005a60d05dabb355d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ff41f25987b4d15005a60d05dabb355d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=bb41f25987b4d15005a60d05dabb355c^sys_idNOT IN3741f25987b4d15005a60d05dabb355f,3741f25987b4d15005a60d05dabb358f,b741f25987b4d15005a60d05dabb3597"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=8ff3ca83-fa89-4789-bfc8-9d5f3474ae80</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_token</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Token</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</model>
+        <model_id>bb41f25987b4d15005a60d05dabb355c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_token">x_snc_hhoverlay_token</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual>type=nft</reference_qual>
+        <reference_qual_condition table="x_snc_hhoverlay_token">type=nft<item display_value="NON-FUNGIBLE TOKEN" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="nft"/>
+        </reference_qual_condition>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>3741f25987b4d15005a60d05dabb355f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Metadata_child0,child_name=metadata_child0,child_type=string,child_type_label=String,child_uiUniqueId=4018cdef-a8d6-4ba6-b834-1e646df78a73,co_type_name=FDae3c3ed1eff4d1503985cf8b6fd43d56,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.string,uiTypeLabel=Array.String,uiUniqueId=d2885b70-2fbd-4256-a785-60e94bd23cb0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>metadata</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Metadata</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</model>
+        <model_id>bb41f25987b4d15005a60d05dabb355c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>3741f25987b4d15005a60d05dabb358f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:36:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_list,uiTypeLabel=List,uiUniqueId=f9826b1f-8f3d-4d31-92a4-7104376e62e5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_key</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sign_with</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_list</internal_type>
+        <label>sign_with</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</model>
+        <model_id>bb41f25987b4d15005a60d05dabb355c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_key">x_snc_hhoverlay_key</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>b741f25987b4d15005a60d05dabb3597</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=bb41f25987b4d15005a60d05dabb355c^sys_idNOT INc051f25987b4d15005a60d05dabb35b2"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c79ff2f7-f8b1-42ba-80c7-50000694108c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_hhoverlay_transaction</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>transaction</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>transaction</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</model>
+        <model_id>bb41f25987b4d15005a60d05dabb355c</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_hhoverlay_transaction">x_snc_hhoverlay_transaction</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>c051f25987b4d15005a60d05dabb35b2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:20:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=bb41f25987b4d15005a60d05dabb355c^sys_idNOT IN4851f25987b4d15005a60d05dabb35cf,9451f25987b4d15005a60d05dabb35e8,9851f25987b4d15005a60d05dabb35fb,dc51365987b4d15005a60d05dabb3500"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Convert key list in public_key array">94804efa87e0991049d18777dabb35ab</action_type>
+        <action_type_parent display_value="Convert key list in public_key array">2c6fbdba87e0991049d18777dabb351e</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>4851f25987b4d15005a60d05dabb35cf</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>67f1ce1e-51c6-4136-aece-7d50b82210f6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4851f25987b4d15005a60d05dabb35cf"/>
+    <sys_element_mapping action="delete_multiple" query="id=4851f25987b4d15005a60d05dabb35cf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>key_list</field>
+        <id>4851f25987b4d15005a60d05dabb35cf</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>8451f25987b4d15005a60d05dabb35d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:25</sys_updated_on>
+        <table>var__m_sys_hub_action_input_94804efa87e0991049d18777dabb35ab</table>
+        <value>{{subflow.sign_with}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4851f25987b4d15005a60d05dabb35cf"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4851f25987b4d15005a60d05dabb35cf"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="mint_nft">40db796d475741101cf79454836d4373</action_type>
+        <action_type_parent display_value="mint_nft">11ab356d475741101cf79454836d438c</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>9451f25987b4d15005a60d05dabb35e8</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>41ed64e1-43ae-4e6b-b795-b1dc5b17102a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9451f25987b4d15005a60d05dabb35e8"/>
+    <sys_element_mapping action="delete_multiple" query="id=9451f25987b4d15005a60d05dabb35e8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>metadata</field>
+        <id>9451f25987b4d15005a60d05dabb35e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>d451f25987b4d15005a60d05dabb35e9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:36:07</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{subflow.metadata}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sign_with</field>
+        <id>9451f25987b4d15005a60d05dabb35e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>9851f25987b4d15005a60d05dabb35e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{67f1ce1e-51c6-4136-aece-7d50b82210f6.key_array}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>token_id</field>
+        <id>9451f25987b4d15005a60d05dabb35e8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>5c51f25987b4d15005a60d05dabb35e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_40db796d475741101cf79454836d4373</table>
+        <value>{{subflow.token.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9451f25987b4d15005a60d05dabb35e8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9451f25987b4d15005a60d05dabb35e8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <order>4</order>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>9851f25987b4d15005a60d05dabb35fb</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>70322f83-0c9d-433c-ba36-11f20c043474</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9851f25987b4d15005a60d05dabb35fb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9851f25987b4d15005a60d05dabb35fb</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>5051f25987b4d15005a60d05dabb35fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <value>x_snc_hhoverlay_transaction</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>9851f25987b4d15005a60d05dabb35fb</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>9c51f25987b4d15005a60d05dabb35fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:08:35</sys_updated_on>
+        <value/>
+        <variable display_value="Fields">6de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=9851f25987b4d15005a60d05dabb35fb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>9851f25987b4d15005a60d05dabb35fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>5851f25987b4d15005a60d05dabb35fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>9851f25987b4d15005a60d05dabb35fb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>1c51f25987b4d15005a60d05dabb35fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:08:35</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>transaction_id={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id}}^transaction_hash={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_hash}}^consensus_timestamp={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.consensus_timestamp}}^status={{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.hstatus}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9851f25987b4d15005a60d05dabb35fb"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9851f25987b4d15005a60d05dabb35fb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <order>6</order>
+        <parent_ui_id>c9fd8fc1-6afe-4d6c-93b8-6ce23002319b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>dc51365987b4d15005a60d05dabb3500</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>d9719aaa-c3de-4f0d-a99d-312b56830026</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dc51365987b4d15005a60d05dabb3500"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>dc51365987b4d15005a60d05dabb3500</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>d051365987b4d15005a60d05dabb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <value>x_snc_hhoverlay_nft</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dc51365987b4d15005a60d05dabb3500"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>dc51365987b4d15005a60d05dabb3500</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>9c51365987b4d15005a60d05dabb3501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:26</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>dc51365987b4d15005a60d05dabb3500</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:26</sys_created_on>
+        <sys_id>5051365987b4d15005a60d05dabb3502</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:25:28</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>serial={{c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item}}^token={{subflow.token}}^creation_transaction={{70322f83-0c9d-433c-ba36-11f20c043474.record}}^name={{c9fd8fc1-6afe-4d6c-93b8-6ce23002319b.item}}@{{subflow.token.token_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dc51365987b4d15005a60d05dabb3500"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dc51365987b4d15005a60d05dabb3500"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=bb41f25987b4d15005a60d05dabb355c^sys_idNOT IN0051f25987b4d15005a60d05dabb35c1,5c868b9d87f4d15005a60d05dabb35d9,cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">bd20bed587b4d15005a60d05dabb3502</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>0051f25987b4d15005a60d05dabb35c1</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0051f25987b4d15005a60d05dabb35c1"/>
+    <sys_element_mapping action="delete_multiple" query="id=0051f25987b4d15005a60d05dabb35c1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>0051f25987b4d15005a60d05dabb35c1</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>0451f25987b4d15005a60d05dabb35c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.transaction_id}}!=</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c^id=0051f25987b4d15005a60d05dabb35c1"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0051f25987b4d15005a60d05dabb35c1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0051f25987b4d15005a60d05dabb35c1"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">9326c39d87f4d15005a60d05dabb3523</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned>transaction</outputs_assigned>
+        <outputs_to_assign/>
+        <outputs_to_assign/>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 10:21:00</sys_created_on>
+        <sys_id>5c868b9d87f4d15005a60d05dabb35d9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>d9c056fe-18ae-4d79-822c-4319b2706734</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5c868b9d87f4d15005a60d05dabb35d9"/>
+    <sys_element_mapping action="delete_multiple" query="id=5c868b9d87f4d15005a60d05dabb35d9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>transaction</field>
+        <id>5c868b9d87f4d15005a60d05dabb35d9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 10:21:00</sys_created_on>
+        <sys_id>d8868b9d87f4d15005a60d05dabb35dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 10:21:00</sys_updated_on>
+        <table>var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c</table>
+        <value>{{70322f83-0c9d-433c-ba36-11f20c043474.record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5c868b9d87f4d15005a60d05dabb35d9"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5c868b9d87f4d15005a60d05dabb35d9"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">7d20bed587b4d15005a60d05dabb3506</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Mint NFT">bb41f25987b4d15005a60d05dabb355c</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>71e03f98-8425-44ba-b36d-03e54efa8030</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>cc51f25987b4d15005a60d05dabb35c4</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-01 09:46:19</sys_updated_on>
+        <ui_id>c9fd8fc1-6afe-4d6c-93b8-6ce23002319b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_element_mapping action="delete_multiple" query="id=cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>cc51f25987b4d15005a60d05dabb35c4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>8851f25987b4d15005a60d05dabb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:25</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{41ed64e1-43ae-4e6b-b795-b1dc5b17102a.serials}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c^id=cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cc51f25987b4d15005a60d05dabb35c4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c^sys_idNOT IN7f41f25987b4d15005a60d05dabb3593,b341f25987b4d15005a60d05dabb35a0,fb41f25987b4d15005a60d05dabb358b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>metadata</element>
+        <help/>
+        <hint/>
+        <label>Metadata</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>7f41f25987b4d15005a60d05dabb3593</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sign_with</element>
+        <help/>
+        <hint/>
+        <label>sign_with</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>b341f25987b4d15005a60d05dabb35a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>token</element>
+        <help/>
+        <hint/>
+        <label>Token</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:24</sys_created_on>
+        <sys_id>fb41f25987b4d15005a60d05dabb358b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c^sys_idNOT IN4c51f25987b4d15005a60d05dabb35ba"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>transaction</element>
+        <help/>
+        <hint/>
+        <label>transaction</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 08:48:25</sys_created_on>
+        <sys_id>4c51f25987b4d15005a60d05dabb35ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 08:48:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_bb41f25987b4d15005a60d05dabb355c"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>0318661187b4d15005a60d05dabb3527</sys_id>
+        <latest_snapshot>bb41f25987b4d15005a60d05dabb355c</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch5-06-22-2022_06-30-2022_1211.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

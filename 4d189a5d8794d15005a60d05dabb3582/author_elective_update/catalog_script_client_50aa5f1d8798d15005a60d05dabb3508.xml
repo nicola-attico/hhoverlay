@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item/>
+        <cat_variable/>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Redirect to key</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+window.location.href = "x_snc_hhoverlay_key_list.do";   
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-24 15:18:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>50aa5f1d8798d15005a60d05dabb3508</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Redirect to key</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>catalog_script_client_50aa5f1d8798d15005a60d05dabb3508</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-24 15:28:37</sys_updated_on>
+        <table/>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>catalog_script_client_50aa5f1d8798d15005a60d05dabb3508</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="catalog_script_client"&gt;&lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_catalog&gt;true&lt;/applies_catalog&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;applies_req_item&gt;false&lt;/applies_req_item&gt;&lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;&lt;applies_target_record&gt;false&lt;/applies_target_record&gt;&lt;applies_to&gt;item&lt;/applies_to&gt;&lt;cat_item/&gt;&lt;cat_variable/&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Redirect to key&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onSubmit() {
+window.location.href = "x_snc_hhoverlay_key_list.do";   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-06-24 15:18:59&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;50aa5f1d8798d15005a60d05dabb3508&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Redirect to key&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name&gt;catalog_script_client_50aa5f1d8798d15005a60d05dabb3508&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-24 15:28:37&lt;/sys_updated_on&gt;&lt;table/&gt;&lt;type&gt;onSubmit&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;variable_set/&gt;&lt;view/&gt;&lt;/catalog_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>81838400</payload_hash>
+        <record_name>Redirect to key</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-24 16:20:04</sys_created_on>
+        <sys_id>90f8ef1987d8d15005a60d05dabb354b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18196836c410000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-24 16:20:04</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>aa2ddb5dad98d150314a7c6fb7b01d9e</update_guid>
+        <update_guid_history>aa2ddb5dad98d150314a7c6fb7b01d9e:-72801477,aa2ddb5dad98d150314a7c6fb7b01d9e:-72801477,a76b175d0e98d15096bf5d56bc0ceb26:-1242102851,a5fa5f1db898d15013863de0ac1a2e2a:2091199367</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Redirect to key">9c19eb1987d8d15005a60d05dabb359b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-06-24 16:20:37</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>30b203536f2b48d09bd7ed8cc816db24</sys_id>
+        <sys_metadata>50aa5f1d8798d15005a60d05dabb3508</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Redirect to key</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>catalog_script_client_50aa5f1d8798d15005a60d05dabb3508</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_50aa5f1d8798d15005a60d05dabb3508">90f8ef1987d8d15005a60d05dabb354b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-24 16:20:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

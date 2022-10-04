@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Token" max_length="40" name="x_snc_hhoverlay_token" sizeclass="4" type="collection">
+        <element display="true" label="Local Name" max_length="200" name="local_name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.token_id;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Token" max_length="32" name="token" reference="x_snc_hhoverlay_st_token" type="reference" virtual="true"/>
+        <element label="Token Id" max_length="50" name="token_id" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="NON-FUNGIBLE TOKEN" value="nft"/>
+                <element inactive_on_update="false" label="FUNGIBLE TOKEN" sequence="10" value="ft"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="token"/>
+        </index>
+    </element>
+</database>

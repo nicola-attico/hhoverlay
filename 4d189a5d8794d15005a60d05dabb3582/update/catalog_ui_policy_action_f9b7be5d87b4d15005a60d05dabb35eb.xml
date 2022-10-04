@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Mint NFT">3506269d8774d15005a60d05dabb3584</catalog_item>
+        <catalog_variable>IO:753432d987b4d15005a60d05dabb35e7</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-19 09:17:06</sys_created_on>
+        <sys_id>f9b7be5d87b4d15005a60d05dabb35eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>metadata_01</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_f9b7be5d87b4d15005a60d05dabb35eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-19 09:17:06</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Manage metadata_00">0f667e5d87b4d15005a60d05dabb3537</ui_policy>
+        <variable>metadata_01</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Topic" max_length="40" name="x_snc_hhoverlay_topic" sizeclass="0" type="collection">
+        <element label="Topic Id" max_length="50" name="topic_id" type="string"/>
+    </element>
+</database>

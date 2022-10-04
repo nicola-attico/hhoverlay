@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Account" max_length="40" name="x_snc_hhoverlay_st_account" sizeclass="0" type="collection">
+        <element label="Account Id" max_length="50" name="account_id" type="string"/>
+        <element label="Auto Renew Period" max_length="100" name="auto_renew_period" type="string"/>
+        <element label="Balance (tℏ)" max_length="100" name="balance" type="string"/>
+        <element label="Deleted" max_length="40" name="deleted" type="boolean"/>
+        <element label="Key" max_length="32" name="key" reference="x_snc_hhoverlay_key" type="reference"/>
+        <element label="Key Suffix" max_length="100" name="key_suffix" type="string"/>
+        <element label="Max Automatic Token Associations" max_length="50" name="max_automatic_token_associations" type="string"/>
+        <element label="Memo" max_length="100" name="memo" type="string"/>
+        <element label="Receiver Signature Required" max_length="40" name="receiver_signature_required" type="boolean"/>
+        <index name="index">
+            <element name="key"/>
+        </index>
+    </element>
+</database>

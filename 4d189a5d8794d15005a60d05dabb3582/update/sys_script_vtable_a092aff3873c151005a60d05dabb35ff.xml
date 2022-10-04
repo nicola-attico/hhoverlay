@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>Token Association</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+
+    try {
+        a = []
+        t = []
+
+        var account = new GlideRecord("x_snc_hhoverlay_account")
+        account.query()
+        while (account.next()) {
+            a.push({
+                account_id: account.getValue("account_id"),
+                sys_id: account.getValue("sys_id")
+            })
+        }
+        //gs.addInfoMessage("a: " + JSON.stringify(a))
+
+        var token = new GlideRecord("x_snc_hhoverlay_token")
+        token.query()
+        while (token.next()) {
+            t.push({
+                token_id: token.getValue("token_id"),
+                sys_id: token.getValue("sys_id")
+            })
+        }
+        //gs.addInfoMessage("t: " + JSON.stringify(t))
+
+        for (i = 0; i < a.length; i++) {
+
+            var inputs = {};
+            inputs['account_id'] = a[i].account_id; // String 
+
+            var result = sn_fd.FlowAPI.getRunner().action('x_snc_hhspoke.q_account_balance').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            var response = outputs['response']; // String
+            var tokens = JSON.parse(response).resp.tokens
+            //gs.addInfoMessage("tokens: " + JSON.stringify(tokens))
+
+            for (j = 0; j < t.length; j++) {
+
+                var row = {}
+
+                row.associated = false
+                //row.balance = null
+                //row.decimals = null
+                //row.fmt_balance = null
+
+                for (k = 0; k < tokens.length; k++) {
+                    if (t[j].token_id == tokens[k].tokenId) {
+                        row.associated = true
+                        row.balance = tokens[k].balance,
+                            row.decimals = tokens[k].decimals,
+                            row.fmt_balance = new Utils().add_comma(tokens[k].balance.toString(), Number(tokens[k].decimals))
+                    }
+                }
+
+                row.account = a[i].sys_id
+				row.account_id = a[i].account_id
+                row.token = t[j].sys_id
+				row.token_id = t[j].token_id
+                row.sys_id = a[i].sys_id + "@" + t[j].sys_id
+
+                //gs.addInfoMessage(JSON.stringify(row))
+                v_table.addRow(row)
+            }
+        }
+    } catch (e) {
+        gs.addInfoMessage(JSON.stringify(e))
+    }
+
+})(v_table, v_query);]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-27 06:48:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a092aff3873c151005a60d05dabb35ff</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>Token Association</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_script_vtable_a092aff3873c151005a60d05dabb35ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-27 10:34:05</sys_updated_on>
+        <table>x_snc_hhoverlay_st_token_association</table>
+    </sys_script_vtable>
+</record_update>

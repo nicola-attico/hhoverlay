@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[$j(function() {
+    $j("#tx").text(window.location.search.split("=")[1])
+})]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_snc_hhoverlay_Success.do</endpoint>
+        <html><![CDATA[<html>
+<head>
+  <title>Success</title>
+</head>
+<body>
+<header>
+<img src="Concert.png" />
+</header>
+	Two tickets have been successfully sent to your account
+Please watch your wallet!
+	Transaction Id: <span id="tx"></span>
+	</body>
+</html>]]></html>
+        <name>Success</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-26 17:09:08</sys_created_on>
+        <sys_id>5e401cbd8761119049d18777dabb350e</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Success</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_update_name>sys_ui_page_5e401cbd8761119049d18777dabb350e</sys_update_name>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 13:29:02</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</application>
+        <file_path/>
+        <instance_id>77d51ed5db7f415849eac597059619bd</instance_id>
+        <instance_name>hederarest</instance_name>
+        <name>sys_ui_page_5e401cbd8761119049d18777dabb350e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[$j(function() {
+    $j("#tx").text(window.location.search.split("=")[1])
+})]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_snc_hhoverlay_Success.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Success&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;
+&lt;img src="Concert.png" /&gt;
+&lt;/header&gt;
+	Two tickets have been successfully sent to your account
+Please watch your wallet!
+	Transaction Id: &lt;span id="tx"&gt;&lt;/span&gt;
+	&lt;/body&gt;
+&lt;/html&gt;]]&gt;&lt;/html&gt;&lt;name&gt;Success&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-08-26 17:09:08&lt;/sys_created_on&gt;&lt;sys_id&gt;5e401cbd8761119049d18777dabb350e&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Success&lt;/sys_name&gt;&lt;sys_package display_value="hhoverlay" source="x_snc_hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="hhoverlay"&gt;4d189a5d8794d15005a60d05dabb3582&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_5e401cbd8761119049d18777dabb350e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;alice&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-08-31 13:29:02&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1607038014</payload_hash>
+        <record_name>Success</record_name>
+        <reverted_from/>
+        <source>91189a5d8794d15005a60d05dabb3585</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>alice</sys_created_by>
+        <sys_created_on>2022-08-31 13:29:02</sys_created_on>
+        <sys_id>4eed411f8721d95005a60d05dabb35a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>182f41746510000001</sys_recorded_at>
+        <sys_updated_by>alice</sys_updated_by>
+        <sys_updated_on>2022-08-31 13:29:02</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>06ed411f7921d950f88a6d0fed3e9da7</update_guid>
+        <update_guid_history>06ed411f7921d950f88a6d0fed3e9da7:-1607038014,fed5dcf178a11190606e4fe3099e5a36:-2061804853,c2a55cf180a11190ab839b055aed5c1c:-1862077324,736598f184a11190c554dce394499b63:-845543243,6cc3d4b1b4a111908e9ad0f9cfe66c00:-920505102,11501cfd50611190e1a7dc20c6ad7ffe:1840691000</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-09-05 17:56:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>9b2efd23c74948ccafa96d0d010012c9</sys_id>
+        <sys_metadata>5e401cbd8761119049d18777dabb350e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Success</sys_name>
+        <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
+        <sys_scope_delete display_value="">1700d450dfb141d88486ea39fe7b52c4</sys_scope_delete>
+        <sys_update_name>sys_ui_page_5e401cbd8761119049d18777dabb350e</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_5e401cbd8761119049d18777dabb350e">4eed411f8721d95005a60d05dabb35a7</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-09-05 17:56:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

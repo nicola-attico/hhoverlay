@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Key" max_length="40" name="x_snc_hhoverlay_key" sizeclass="4" type="collection">
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Public Key" max_length="100" name="public_key" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ECDSA" value="ecdsa"/>
+                <element inactive_on_update="false" label="ED25519" value="ed25519"/>
+            </choice>
+        </element>
+    </element>
+</database>

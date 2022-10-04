@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Account" max_length="40" name="x_snc_hhoverlay_account" sizeclass="5" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;    if (current.account_id) {&#13;&#10;        return current.account_id;&#13;&#10;    }&#13;&#10;&#13;&#10;})(current);" label="Account" max_length="32" name="account" reference="x_snc_hhoverlay_st_account" type="reference" virtual="true"/>
+        <element label="Account Id" max_length="20" name="account_id" type="string"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <index name="index">
+            <element name="account"/>
+        </index>
+    </element>
+</database>
