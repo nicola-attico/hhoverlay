@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Message" max_length="40" name="x_snc_hhoverlay_message" sizeclass="0" type="collection">
+        <element label="Consensus Timestamp" max_length="100" name="consensus_timestamp" type="string"/>
+        <element label="Message64" max_length="10000" name="message64" type="string_full_utf8"/>
+        <element label="Sequence Number" max_length="40" name="sequence_number" type="longint"/>
+        <element label="Topic" max_length="32" name="topic" reference="x_snc_hhoverlay_topic" type="reference"/>
+        <index name="index">
+            <element name="topic"/>
+        </index>
+    </element>
+</database>
