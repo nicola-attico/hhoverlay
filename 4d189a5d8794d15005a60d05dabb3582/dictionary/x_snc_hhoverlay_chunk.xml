@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Chunk" max_length="40" name="x_snc_hhoverlay_chunk" type="collection">
+    <element label="Chunk" max_length="40" name="x_snc_hhoverlay_chunk" sizeclass="3" type="collection">
         <element label="Consensus Timestamp" max_length="100" name="consensus_timestamp" type="string"/>
+        <element label="Message" max_length="10000" name="message" type="string_full_utf8"/>
         <element label="Message64" max_length="10000" name="message64" type="string"/>
         <element label="Number" max_length="40" name="number" type="longint"/>
         <element label="Sequence Number" max_length="40" name="sequence_number" type="longint"/>
         <element label="Topic Id" max_length="50" name="topic_id" type="string"/>
         <element label="Total" max_length="40" name="total" type="longint"/>
+        <element label="Transaction Valid Start" max_length="100" name="transaction_valid_start" type="string"/>
     </element>
 </database>

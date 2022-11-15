@@ -34,34 +34,31 @@
         gr.initialize()
         gr.sequence_number = current.sequence_number
         gr.message64 = current.message64
+		gr.message = gs.base64Decode(current.message64)
         gr.topic_id = current.topic_id
+        gr.transaction_valid_start = current.transaction_valid_start
+        gr.consensus_timestamp = current.consensus_timestamp
         gr.insert()
     } else {
-        chunk = new GlideRecord("x_snc_hhoverlay_chunk")
-        chunk.addQuery("topic_id", current.topic_id)
-        chunk.addQuery("sequence_number", current.sequence_number)
-        chunk.orderBy("number")
-        chunk.query()
+        chunks = new GlideRecord("x_snc_hhoverlay_chunk")
+        chunks.addQuery("topic_id", current.topic_id)
+        chunks.addQuery("transaction_valid_start", current.transaction_valid_start)
+        chunks.orderBy("number")
+        chunks.query()
+        var x = chunks.getRowCount()
 
-        var message64 = ""
-        var counter = 0
-        var success = true
-        while (chunk.next()) {
-			counter = counter + 1
-            if (chunk.number == counter) {
-                message64 += chunk.message64
-				gs.info("counter " + i + " " + message64)
-            } else {
-                success = false
-                break
+        if (x == current.total) {
+            gs.info("outcome true")
+            var message = ""
+            while (chunks.next()) {
+                message = message + chunks.message
             }
-        }
-
-        if (success == true) {
             gr.initialize()
             gr.sequence_number = current.sequence_number
-            gr.message64 = message64
+            gr.message64 = gs.base64Encode(message)
+			gr.message = message
             gr.topic_id = current.topic_id
+            gr.transaction_valid_start = current.transaction_valid_start
             gr.insert()
         }
     }
@@ -73,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3218ccaf87831d1005a60d05dabb35d4</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>Build messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
@@ -81,7 +78,7 @@
         <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
         <sys_update_name>sys_script_3218ccaf87831d1005a60d05dabb35d4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-14 21:36:32</sys_updated_on>
+        <sys_updated_on>2022-11-15 13:44:13</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
