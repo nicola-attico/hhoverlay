@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Topic" max_length="40" name="x_snc_hhoverlay_topic" sizeclass="1" type="collection">
+        <element label="Local Name" max_length="200" name="local_name" type="string_full_utf8"/>
+        <element label="Processor" max_length="32" name="processor" reference="sys_script_include" type="reference"/>
         <element display="true" label="Topic Id" max_length="50" name="topic_id" type="string"/>
+        <index name="index">
+            <element name="processor"/>
+        </index>
     </element>
 </database>

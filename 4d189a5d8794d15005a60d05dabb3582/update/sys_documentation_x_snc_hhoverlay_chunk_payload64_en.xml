@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="message" label="Message" language="en" table="x_snc_hhoverlay_message">
+    <sys_documentation element="payload64" label="Payload64" language="en" table="x_snc_hhoverlay_chunk">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>message</element>
+            <element>payload64</element>
             <help/>
             <hint/>
-            <label>Message</label>
+            <label>Payload64</label>
             <language>en</language>
-            <name>x_snc_hhoverlay_message</name>
-            <plural>Messages</plural>
+            <name>x_snc_hhoverlay_chunk</name>
+            <plural>Payload64s</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2022-11-15 13:38:49</sys_created_on>
-            <sys_id>5af8207387435d1005a60d05dabb3514</sys_id>
+            <sys_created_on>2022-11-18 10:08:39</sys_created_on>
+            <sys_id>09a5dba0879fdd1005a60d05dabb359f</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Message</sys_name>
+            <sys_name>Payload64</sys_name>
             <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
             <sys_policy/>
             <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
-            <sys_update_name>sys_documentation_x_snc_hhoverlay_message_message_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_snc_hhoverlay_chunk_payload64_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2022-11-15 13:38:49</sys_updated_on>
+            <sys_updated_on>2022-11-18 10:08:39</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

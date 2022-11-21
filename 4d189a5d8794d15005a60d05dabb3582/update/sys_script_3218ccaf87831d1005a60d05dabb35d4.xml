@@ -30,38 +30,48 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     gr = new GlideRecord("x_snc_hhoverlay_message")
-    if (current.total == 1) {
+
+    if (!gr.get("transaction_valid_start", current.transaction_valid_start)) {
         gr.initialize()
-        gr.sequence_number = current.sequence_number
-        gr.message64 = current.message64
-		gr.message = gs.base64Decode(current.message64)
-        gr.topic_id = current.topic_id
-        gr.transaction_valid_start = current.transaction_valid_start
-        gr.consensus_timestamp = current.consensus_timestamp
-        gr.insert()
-    } else {
+
         chunks = new GlideRecord("x_snc_hhoverlay_chunk")
         chunks.addQuery("topic_id", current.topic_id)
         chunks.addQuery("transaction_valid_start", current.transaction_valid_start)
         chunks.orderBy("number")
         chunks.query()
-        var x = chunks.getRowCount()
 
-        if (x == current.total) {
-            gs.info("outcome true")
-            var message = ""
+        if (chunks.getRowCount() == current.total) {
+            gs.info("triggered")
+            var message_sys_id = gs.generateGUID()
+            var payload = ""
+            var min_sequence_number
+            var first_message = true
             while (chunks.next()) {
-                message = message + chunks.message
+                if (first_message == true) {
+                    min_sequence_number = chunks.getValue("sequence_number")
+					gs.info("min " + min_sequence_number)
+                    first_message = false
+                }
+                payload = payload + chunks.payload
+                chunks.message = message_sys_id
+                chunks.update()
             }
-            gr.initialize()
-            gr.sequence_number = current.sequence_number
-            gr.message64 = gs.base64Encode(message)
-			gr.message = message
+			gs.info("min2 " + min_sequence_number)
+            gr.sequence_number = min_sequence_number
+            gr.sys_id = message_sys_id
+            gr.payload64 = gs.base64Encode(payload)
+            gr.payload = payload
+			gr.state = "pending"
             gr.topic_id = current.topic_id
+            gr.chunks = current.total
             gr.transaction_valid_start = current.transaction_valid_start
             gr.insert()
+        } else {
+            gs.info("not triggered")
         }
+
     }
+
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -70,7 +80,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3218ccaf87831d1005a60d05dabb35d4</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>Build messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
@@ -78,7 +88,7 @@
         <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
         <sys_update_name>sys_script_3218ccaf87831d1005a60d05dabb35d4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:44:13</sys_updated_on>
+        <sys_updated_on>2022-11-18 15:35:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

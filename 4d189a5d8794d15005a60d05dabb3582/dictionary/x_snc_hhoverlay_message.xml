@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Message" max_length="40" name="x_snc_hhoverlay_message" sizeclass="1" type="collection">
+    <element label="Message" max_length="40" name="x_snc_hhoverlay_message" sizeclass="2" type="collection">
+        <element label="Chunks" max_length="40" name="chunks" type="longint"/>
         <element label="Consensus Timestamp" max_length="100" name="consensus_timestamp" type="string"/>
-        <element label="Message" max_length="10000" name="message" type="string_full_utf8"/>
-        <element label="Message64" max_length="10000" name="message64" type="string_full_utf8"/>
+        <element label="Payload" max_length="100000" name="payload" type="string_full_utf8"/>
+        <element label="Payload64" max_length="100000" name="payload64" type="string"/>
         <element label="Sequence Number" max_length="40" name="sequence_number" type="longint"/>
+        <element choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="10" value="pending"/>
+                <element inactive_on_update="false" label="Processed" sequence="20" value="processed"/>
+            </choice>
+        </element>
         <element label="Topic" max_length="32" name="topic" reference="x_snc_hhoverlay_topic" type="reference"/>
+        <element label="Topic Id" max_length="100" name="topic_id" type="string"/>
         <element label="Transaction Valid Start" max_length="100" name="transaction_valid_start" type="string"/>
         <index name="index">
             <element name="topic"/>

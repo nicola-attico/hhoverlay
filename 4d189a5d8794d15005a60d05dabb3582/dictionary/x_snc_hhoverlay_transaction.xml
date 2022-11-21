@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Transaction" max_length="40" name="x_snc_hhoverlay_transaction" sizeclass="58" type="collection">
+    <element label="Transaction" max_length="40" name="x_snc_hhoverlay_transaction" sizeclass="76" type="collection">
         <element label="Account" max_length="32" name="account" reference="x_snc_hhoverlay_account" type="reference"/>
         <element label="Consensus Timestamp" max_length="100" name="consensus_timestamp" type="string"/>
+        <element label="Message" max_length="32" name="message" reference="x_snc_hhoverlay_message" type="reference"/>
+        <element label="Sequence" max_length="40" name="sequence" type="longint"/>
+        <element label="Sequence Number" max_length="40" name="sequence_number" type="longint"/>
         <element choice="1" label="Stage" max_length="40" name="stage" type="choice">
             <choice>
                 <element inactive_on_update="false" label="DO" value="DO"/>
@@ -21,9 +24,12 @@
             <element name="topic"/>
         </index>
         <index name="index2">
-            <element name="account"/>
+            <element name="message"/>
         </index>
         <index name="index3">
+            <element name="account"/>
+        </index>
+        <index name="index4">
             <element name="token"/>
         </index>
     </element>

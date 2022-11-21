@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7455fbdb87431d1005a60d05dabb35d4</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>write_messages</sys_name>
         <sys_overrides/>
         <sys_package display_value="hhoverlay" source="x_snc_hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_7455fbdb87431d1005a60d05dabb35d4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:05</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:09</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,10 +86,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-14 15:35:33</sys_created_on>
         <sys_id>be1ab71387831d1005a60d05dabb3505</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:02</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:06</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=be1ab71387831d1005a60d05dabb3505"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -100,22 +100,22 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-14 15:35:34</sys_created_on>
         <sys_id>be1afb1387831d1005a60d05dabb352b</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:02</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:06</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var messages = JSON.parse(inputs.mirror_res).messages
   
   for (i=0; i &lt; messages.length; i++) {
     gr = new GlideRecord("x_snc_hhoverlay_chunk")
-    if (!gr.get("sequence_number", messages[i].sequence_number)) {
+    if (!gr.get("consensus_timestamp", messages[i].consensus_timestamp)) {
       gr.initialize()
       gr.sequence_number = messages[i].sequence_number
       gr.number = messages[i].chunk_info.number
       gr.total = messages[i].chunk_info.total
-      gr.message64 = messages[i].message
-      gr.message = gs.base64Decode(messages[i].message)
+      gr.payload64 = messages[i].message
+      gr.payload = gs.base64Decode(messages[i].message)
       gr.topic_id =  messages[i].topic_id
       gr.consensus_timestamp = messages[i].consensus_timestamp
       gr.transaction_valid_start = messages[i].chunk_info.initial_transaction_id.transaction_valid_start
@@ -607,17 +607,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="write_messages">7455fbdb87431d1005a60d05dabb35d4</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"d71c7f9387831d1005a60d05dabb35df","name":"plan","plan_signature":null}}</plan>
-        <snapshot>d7daacb387435d1005a60d05dabb3522</snapshot>
+        <snapshot>a5e69324879fdd1005a60d05dabb35ee</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-14 15:44:20</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d71c7f9387831d1005a60d05dabb35df</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:07</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:11</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -704,10 +704,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-14 15:44:18</sys_created_on>
         <sys_id>fe1c7f9387831d1005a60d05dabb354b</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_scope display_value="hhoverlay">4d189a5d8794d15005a60d05dabb3582</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:04</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:09</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=fe1c7f9387831d1005a60d05dabb354b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -718,22 +718,22 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-11-14 15:44:18</sys_created_on>
         <sys_id>be1c7f9387831d1005a60d05dabb3556</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:47:04</sys_updated_on>
+        <sys_updated_on>2022-11-18 10:14:09</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var messages = JSON.parse(inputs.mirror_res).messages
   
   for (i=0; i &lt; messages.length; i++) {
     gr = new GlideRecord("x_snc_hhoverlay_chunk")
-    if (!gr.get("sequence_number", messages[i].sequence_number)) {
+    if (!gr.get("consensus_timestamp", messages[i].consensus_timestamp)) {
       gr.initialize()
       gr.sequence_number = messages[i].sequence_number
       gr.number = messages[i].chunk_info.number
       gr.total = messages[i].chunk_info.total
-      gr.message64 = messages[i].message
-      gr.message = gs.base64Decode(messages[i].message)
+      gr.payload64 = messages[i].message
+      gr.payload = gs.base64Decode(messages[i].message)
       gr.topic_id =  messages[i].topic_id
       gr.consensus_timestamp = messages[i].consensus_timestamp
       gr.transaction_valid_start = messages[i].chunk_info.initial_transaction_id.transaction_valid_start
